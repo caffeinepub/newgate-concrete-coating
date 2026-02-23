@@ -1,0 +1,77 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-replace-all-instances-of-the-word-epoxy-with-polyaspartic-in-the-herosection-component-including-the-tagline-and-any-descriptive-text",
+      "featureTitle": "Replace all instances of the word 'epoxy' with 'polyaspartic' in the HeroSection component, including the tagline and any descriptive text",
+      "files": [
+        "frontend/src/components/HeroSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-24"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-replace-all-instances-of-epoxy-with-polyaspartic-in-the-servicessection-component-for-all-four-service-names-patio-polyaspartic-coating-driveway-polyaspartic-coating-pool-deck-polyaspartic-coating-and-garage-floor-polyaspartic-coating",
+      "featureTitle": "Replace all instances of 'epoxy' with 'polyaspartic' in the ServicesSection component for all four service names: 'patio polyaspartic coating', 'driveway polyaspartic coating', 'pool deck polyaspartic coating', and 'garage floor polyaspartic coating'",
+      "files": [
+        "frontend/src/components/ServicesSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-25"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-replace-all-instances-of-epoxy-with-polyaspartic-in-the-aboutsection-component-updating-the-company-expertise-description-and-benefit-cards-to-reference-polyaspartic-coating-applications",
+      "featureTitle": "Replace all instances of 'epoxy' with 'polyaspartic' in the AboutSection component, updating the company expertise description and benefit cards to reference polyaspartic coating applications",
+      "files": [
+        "frontend/src/components/AboutSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-26"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-replace-all-instances-of-epoxy-with-polyaspartic-in-the-footer-component-including-any-service-descriptions-or-informational-text",
+      "featureTitle": "Replace all instances of 'epoxy' with 'polyaspartic' in the Footer component, including any service descriptions or informational text",
+      "files": [
+        "frontend/src/components/Footer.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-28"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

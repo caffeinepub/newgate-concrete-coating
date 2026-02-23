@@ -1,0 +1,21 @@
+{
+  "backend/main.mo": "Motoko actor implementing a quote request management system with functions to submit, retrieve, search by name, and list all quote requests stored in a Map.",
+  "feature_evidence.json": "Feature evidence report documenting four completed features that replaced 'epoxy' with 'polyaspartic' across HeroSection, ServicesSection, AboutSection, and Footer components.",
+  "frontend-file-summaries.txt": "JSON-formatted summaries of frontend files describing a polyaspartic coating company website with navigation, hero, services, about, contact sections, and backend integration hooks.",
+  "frontend/index.css": "Tailwind CSS configuration with OKLCH color system defining light and dark theme variables for a concrete-inspired gray and copper design system.",
+  "frontend/index.html": "HTML entry point for NewGate Concrete Coating application with root div and module script reference to main.tsx.",
+  "frontend/src/App.tsx": "Root React component rendering the full website layout with Navigation, HeroSection, ServicesSection, AboutSection, ContactSection, and Footer components.",
+  "frontend/src/components/AboutSection.tsx": "About section component displaying four benefit cards with icons, company description focused on polyaspartic coatings, and service areas (Orlando, Tampa, Plant City) with MapPin badges.",
+  "frontend/src/components/ContactSection.tsx": "Contact form component with validation that submits quote requests to the backend actor, displays contact info (phone, email, location), and shows success state after submission.",
+  "frontend/src/components/Footer.tsx": "Footer component with company branding, social media links, quick navigation, contact details, service areas list, polyaspartic coating description, and caffeine.ai attribution with UTM tracking.",
+  "frontend/src/components/HeroSection.tsx": "Hero section component with background image, company branding, phone CTA, and buttons to scroll to contact/services sections. Includes animated scroll indicator at bottom.",
+  "frontend/src/components/Navigation.tsx": "Fixed navigation bar with logo, menu links (Home, Services, About, Contact), and responsive mobile menu. Changes background on scroll and provides smooth scrolling to page sections.",
+  "frontend/src/components/ServicesSection.tsx": "Services section displaying four polyaspartic coating services (patio, driveway, pool deck, garage) in a responsive card grid with images, descriptions, and feature tags.",
+  "frontend/src/hooks/useActor.ts": "React hook that manages the backend actor instance based on Internet Identity authentication state, creating authenticated or anonymous actors and invalidating dependent queries on identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "React context provider and hook for Internet Identity authentication, managing login state, identity persistence, and AuthClient lifecycle with configurable options.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for fetching all quote requests and submitting new quote requests via the backend actor, with automatic cache invalidation on mutations.",
+  "frontend/src/index.css": "Tailwind CSS configuration with custom design tokens for concrete-inspired color palette (neutrals, copper accents) in light and dark modes, plus utility classes for theme colors.",
+  "frontend/src/main.tsx": "Application entry point that sets up React Query client and Internet Identity provider, then renders the root App component.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration file defining custom color schemes using OKLCH color space (including copper, concrete, sidebar themes), container settings, border radius variables, custom fonts (Inter), and animation keyframes for accordions.",
+  "project_state.json": "Project state tracking file documenting NewGate Concrete Coating website features including hero section, services showcase (patio/driveway/pool/garage coating), about section, contact form, navigation, industrial-modern design theme with earthy tones, and company branding elements."
+}

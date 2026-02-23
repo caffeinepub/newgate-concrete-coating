@@ -1,2 +1,3 @@
-# newgate-concrete-coating
-Exported from Caffeine project: NewGate Concrete Coating
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

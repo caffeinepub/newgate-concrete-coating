@@ -1,0 +1,323 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 13,
+  "summary": "Website for NewGate Concrete Coating - a business specializing in polyaspartic coating services for patios, driveways, pools, and garages",
+  "architectural_notes": [
+    "Website project for service business (not a web application)",
+    "Focus on showcasing epoxy coating services for multiple surface types"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-hero-section-with-company-name-newgate-concrete-coating-and-tagline-describing-epoxy-coating-services-for-residential-and-commercial-spaces",
+      "title": "Create a hero section with company name 'NewGate Concrete Coating' and tagline describing epoxy coating services for residential and commercial spaces",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-services-section-showcasing-four-primary-service-areas-patio-epoxy-coating-driveway-epoxy-coating-pool-epoxy-coating-and-garage-floor-epoxy-coating",
+      "title": "Create a services section showcasing four primary service areas: patio epoxy coating, driveway epoxy coating, pool epoxy coating, and garage floor epoxy coating",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-an-about-section-explaining-newgate-concrete-coating-s-expertise-in-epoxy-coating-applications-and-benefits",
+      "title": "Create an about section explaining NewGate Concrete Coating's expertise in epoxy coating applications and benefits",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-contact-section-with-a-form-for-potential-customers-to-request-quotes-or-information",
+      "title": "Create a contact section with a form for potential customers to request quotes or information",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-navigation-menu-with-smooth-scrolling-to-main-sections-home-services-about-and-contact",
+      "title": "Implement navigation menu with smooth scrolling to main sections: Home, Services, About, and Contact",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-professional-industrial-modern-visual-theme-with-earthy-tones-grays-concrete-textures-warm-accents-that-reflects-the-concrete-coating-industry-avoiding-blue-and-purple-color-schemes",
+      "title": "Design a professional, industrial-modern visual theme with earthy tones (grays, concrete textures, warm accents) that reflects the concrete coating industry, avoiding blue and purple color schemes",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-include-generated-images-as-static-assets-hero-background-showing-high-quality-epoxy-coated-surface-and-service-images-for-each-coating-type-patio-driveway-pool-garage",
+      "title": "Include generated images as static assets: hero background showing high-quality epoxy-coated surface, and service images for each coating type (patio, driveway, pool, garage)",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-company-logo-image-to-the-navigation-bar-on-the-left-side-replacing-or-complementing-the-current-text-based-branding",
+      "title": "Add the company logo image to the navigation bar on the left side, replacing or complementing the current text-based branding",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-footer-component-to-display-the-contact-email-newgatecoatings-icloud-com-and-phone-number-1-813-608-2563-in-the-contact-details-section",
+      "title": "Update the Footer component to display the contact email 'Newgatecoatings@icloud.com' and phone number '+1 (813) 608-2563' in the contact details section",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-the-phone-number-1-813-608-2563-in-the-herosection-component-as-a-prominent-call-to-action-option-alongside-the-existing-cta-buttons",
+      "title": "Display the phone number '+1 (813) 608-2563' in the HeroSection component as a prominent call-to-action option alongside the existing CTA buttons",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-all-instances-of-phone-numbers-in-the-codebase-to-1-813-608-2563",
+      "title": "Update all instances of phone numbers in the codebase to '+1 (813) 608-2563'",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-all-instances-of-email-addresses-in-the-codebase-to-newgatecoatings-icloud-com",
+      "title": "Update all instances of email addresses in the codebase to 'Newgatecoatings@icloud.com'",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-reduce-the-font-size-of-newgate-concrete-coating-title-text-in-the-navigation-component-to-prevent-overlap-with-the-logo",
+      "title": "Reduce the font size of 'NewGate Concrete Coating' title text in the Navigation component to prevent overlap with the logo",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-uploaded-logo-image-img-2255-png-as-a-static-asset-in-the-navigation-bar",
+      "title": "Render the uploaded logo image (IMG_2255.png) as a static asset in the navigation bar",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-new-generated-service-images-featuring-epoxy-flakes-and-modern-homes-as-static-assets-in-frontend-public-assets-generated-replacing-existing-service-images",
+      "title": "Render new generated service images featuring epoxy flakes and modern homes as static assets in frontend/public/assets/generated, replacing existing service images",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-troubleshoot-and-fix-the-logo-display-issue-to-ensure-img-2255-png-renders-correctly-in-the-navigation-component",
+      "title": "Troubleshoot and fix the logo display issue to ensure IMG_2255.png renders correctly in the Navigation component",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-new-service-images-showing-epoxy-flake-finishes-applied-to-typical-single-family-residential-homes-modest-everyday-houses-for-all-four-service-areas-patio-driveway-pool-deck-and-garage-floor",
+      "title": "Generate new service images showing epoxy flake finishes applied to typical single-family residential homes (modest, everyday houses) for all four service areas: patio, driveway, pool deck, and garage floor",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-existing-service-images-in-the-servicessection-component-with-the-newly-generated-residential-home-images-and-render-them-as-static-assets-in-frontend-public-assets-generated",
+      "title": "Replace the existing service images in the ServicesSection component with the newly generated residential home images and render them as static assets in frontend/public/assets/generated",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-logo-img-2255-png-in-the-navigation-component-with-the-newly-uploaded-img-2255-jpeg-image",
+      "title": "Replace the current logo (IMG_2255.png) in the Navigation component with the newly uploaded IMG_2255.jpeg image",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-increase-the-logo-size-in-the-navigation-component-by-approximately-25-from-its-current-dimensions",
+      "title": "Increase the logo size in the Navigation component by approximately 25% from its current dimensions",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-service-area-locations-orlando-fl-tampa-fl-and-plant-city-fl-to-the-about-section-describing-where-newgate-concrete-coating-serves-customers",
+      "title": "Add service area locations 'Orlando, FL', 'Tampa, FL', and 'Plant City, FL' to the About section describing where NewGate Concrete Coating serves customers",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-service-area-locations-orlando-fl-tampa-fl-and-plant-city-fl-to-the-footer-component-in-the-service-area-information-section",
+      "title": "Add service area locations 'Orlando, FL', 'Tampa, FL', and 'Plant City, FL' to the Footer component in the service area information section",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-all-instances-of-the-word-epoxy-with-polyaspartic-in-the-herosection-component-including-the-tagline-and-any-descriptive-text",
+      "title": "Replace all instances of the word 'epoxy' with 'polyaspartic' in the HeroSection component, including the tagline and any descriptive text",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-all-instances-of-epoxy-with-polyaspartic-in-the-servicessection-component-for-all-four-service-names-patio-polyaspartic-coating-driveway-polyaspartic-coating-pool-deck-polyaspartic-coating-and-garage-floor-polyaspartic-coating",
+      "title": "Replace all instances of 'epoxy' with 'polyaspartic' in the ServicesSection component for all four service names: 'patio polyaspartic coating', 'driveway polyaspartic coating', 'pool deck polyaspartic coating', and 'garage floor polyaspartic coating'",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-all-instances-of-epoxy-with-polyaspartic-in-the-aboutsection-component-updating-the-company-expertise-description-and-benefit-cards-to-reference-polyaspartic-coating-applications",
+      "title": "Replace all instances of 'epoxy' with 'polyaspartic' in the AboutSection component, updating the company expertise description and benefit cards to reference polyaspartic coating applications",
+      "reqIds": [
+        "REQ-26"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-all-instances-of-epoxy-with-polyaspartic-in-the-footer-component-including-any-service-descriptions-or-informational-text",
+      "title": "Replace all instances of 'epoxy' with 'polyaspartic' in the Footer component, including any service descriptions or informational text",
+      "reqIds": [
+        "REQ-28"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create business website for NewGate Concrete Coating showcasing epoxy coating services",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add company logo to the website",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add contact information (email: Newgatecoatings@icloud.com, phone: +1 (813) 608-2563)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Update all phone numbers in code to +1 (813) 608-2563",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Update all email addresses in code to Newgatecoatings@icloud.com",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Reduce the size of 'NewGate Concrete Coating' title text in navigation to accommodate logo",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Generate new service images featuring epoxy flakes and modern homes instead of luxury settings",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Fix logo display issue - ensure IMG_2255.png renders properly in navigation",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Replace service images with typical single-family residential homes featuring epoxy flake finishes",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Replace current logo with new IMG_2255.jpeg and increase size by 25%",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Add service areas (Orlando, FL, Tampa, FL, Plant City, FL) to About section and Footer",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Render the uploaded IMG_2255.jpeg logo image as a static asset in frontend/public/assets",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Replace all instances of the word 'epoxy' with 'polyaspartic' throughout the entire website",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-21",
+      "summary": "Replace all instances of 'epoxy' with 'polyaspartic' in the ContactSection component, including the form labels, placeholder text, and any descriptive content",
+      "reqIds": [
+        "REQ-27"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-23",
+      "summary": "Replace all instances of 'epoxy' with 'polyaspartic' in any remaining frontend components, including App.tsx, Navigation.tsx, and any utility files that contain references to epoxy coating",
+      "reqIds": [
+        "REQ-29"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "NewGate Concrete Coating",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
