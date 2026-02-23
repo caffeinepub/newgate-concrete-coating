@@ -1,18 +1,34 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-23T19:38:13.027Z",
+  "generatedAt": "2026-02-23T20:41:22.854Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 6,
-    "implemented": 4,
+    "total": 3,
+    "implemented": 3,
     "items": [
       {
-        "id": "REQ-24",
-        "summary": "Replace all instances of the word 'epoxy' with 'polyaspartic' in the HeroSection component, including the tagline and any descriptive text",
+        "id": "REQ-32",
+        "summary": "Remove all instances of the words 'crack' and 'cracks' from all website content across all frontend components (HeroSection, ServicesSection, AboutSection, ContactSection, Footer)",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/HeroSection.tsx",
+          "frontend/src/components/ServicesSection.tsx",
+          "frontend/src/components/AboutSection.tsx",
+          "frontend/src/components/ContactSection.tsx",
+          "frontend/src/components/Footer.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/HeroSection.tsx",
+          "frontend/src/components/ServicesSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-33",
+        "summary": "Add the tagline 'Affordable, Reasonable prices, great quality from start to finish' to the HeroSection component, displayed prominently near the main company tagline",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/HeroSection.tsx"
@@ -22,57 +38,15 @@
         ]
       },
       {
-        "id": "REQ-25",
-        "summary": "Replace all instances of 'epoxy' with 'polyaspartic' in the ServicesSection component for all four service names: 'patio polyaspartic coating', 'driveway polyaspartic coating', 'pool deck polyaspartic coating', and 'garage floor polyaspartic coating'",
+        "id": "REQ-34",
+        "summary": "Update the HeroSection component to change all references from 'pool' to 'pool decks' in the tagline and descriptive text",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/ServicesSection.tsx"
+          "frontend/src/components/HeroSection.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/ServicesSection.tsx"
+          "frontend/src/components/HeroSection.tsx"
         ]
-      },
-      {
-        "id": "REQ-26",
-        "summary": "Replace all instances of 'epoxy' with 'polyaspartic' in the AboutSection component, updating the company expertise description and benefit cards to reference polyaspartic coating applications",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/AboutSection.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/AboutSection.tsx"
-        ]
-      },
-      {
-        "id": "REQ-27",
-        "summary": "Replace all instances of 'epoxy' with 'polyaspartic' in the ContactSection component, including the form labels, placeholder text, and any descriptive content",
-        "status": "missing",
-        "plannedFiles": [
-          "frontend/src/components/ContactSection.tsx"
-        ],
-        "matchedFiles": []
-      },
-      {
-        "id": "REQ-28",
-        "summary": "Replace all instances of 'epoxy' with 'polyaspartic' in the Footer component, including any service descriptions or informational text",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/Footer.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/Footer.tsx"
-        ]
-      },
-      {
-        "id": "REQ-29",
-        "summary": "Replace all instances of 'epoxy' with 'polyaspartic' in any remaining frontend components, including App.tsx, Navigation.tsx, and any utility files that contain references to epoxy coating",
-        "status": "missing",
-        "plannedFiles": [
-          "frontend/src/App.tsx",
-          "frontend/src/components/Navigation.tsx",
-          "frontend/index.html"
-        ],
-        "matchedFiles": []
       }
     ]
   },
@@ -81,8 +55,6 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/AboutSection.tsx",
-    "frontend/src/components/Footer.tsx",
     "frontend/src/components/HeroSection.tsx",
     "frontend/src/components/ServicesSection.tsx",
     "project_state.json",

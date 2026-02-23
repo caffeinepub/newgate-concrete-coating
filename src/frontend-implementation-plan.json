@@ -1,107 +1,71 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Replace all instances of 'epoxy' with 'polyaspartic' throughout the website",
+  "title": "Remove 'crack' references, add value proposition tagline, and update pool to pool decks",
   "requirements": [
     {
-      "id": "REQ-24",
-      "summary": "Replace 'epoxy' with 'polyaspartic' in HeroSection component tagline and descriptive text",
+      "id": "REQ-32",
+      "summary": "Remove all instances of 'crack' and 'cracks' from frontend components",
       "acceptanceCriteria": [
-        "The hero section tagline reads 'polyaspartic coating' instead of 'epoxy coating'",
-        "No instances of the word 'epoxy' remain in the HeroSection component"
+        "No instances of 'crack' or 'cracks' appear in any component text",
+        "Content remains coherent after removal"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Replace all instances of 'epoxy' with 'polyaspartic' in the hero section component, including the tagline text and any descriptive content. Use case-insensitive search to catch variations."
-        }
-      ]
-    },
-    {
-      "id": "REQ-25",
-      "summary": "Replace 'epoxy' with 'polyaspartic' in ServicesSection for all four service cards",
-      "acceptanceCriteria": [
-        "All four service cards display 'polyaspartic coating' instead of 'epoxy coating'",
-        "Service descriptions and feature tags use 'polyaspartic' terminology",
-        "No instances of the word 'epoxy' remain in the ServicesSection component"
-      ],
-      "file_operations": [
+          "description": "Remove any instances of 'crack' or 'cracks' from the hero section text content while maintaining readability and coherent messaging"
+        },
         {
           "path": "frontend/src/components/ServicesSection.tsx",
           "operation": "modify",
-          "description": "Replace all instances of 'epoxy' with 'polyaspartic' in the services section component, including all four service card titles (patio, driveway, pool deck, garage), service descriptions, and feature tags. Ensure the replacement covers all textual content within the component."
-        }
-      ]
-    },
-    {
-      "id": "REQ-26",
-      "summary": "Replace 'epoxy' with 'polyaspartic' in AboutSection expertise descriptions and benefit cards",
-      "acceptanceCriteria": [
-        "The about section describes expertise in 'polyaspartic coating' instead of 'epoxy coating'",
-        "All benefit descriptions reference 'polyaspartic' where coating type is mentioned",
-        "No instances of the word 'epoxy' remain in the AboutSection component"
-      ],
-      "file_operations": [
+          "description": "Remove any instances of 'crack' or 'cracks' from service descriptions and feature tags while preserving the value proposition of polyaspartic coatings"
+        },
         {
           "path": "frontend/src/components/AboutSection.tsx",
           "operation": "modify",
-          "description": "Replace all instances of 'epoxy' with 'polyaspartic' in the about section component, including the company expertise description text and all benefit card content. Review all text content within the component to ensure complete replacement."
-        }
-      ]
-    },
-    {
-      "id": "REQ-27",
-      "summary": "Replace 'epoxy' with 'polyaspartic' in ContactSection form and descriptive content",
-      "acceptanceCriteria": [
-        "Contact form references 'polyaspartic coating' instead of 'epoxy coating'",
-        "No instances of the word 'epoxy' remain in the ContactSection component"
-      ],
-      "file_operations": [
+          "description": "Remove any instances of 'crack' or 'cracks' from the company description and benefit cards, ensuring the remaining text flows naturally"
+        },
         {
           "path": "frontend/src/components/ContactSection.tsx",
           "operation": "modify",
-          "description": "Replace all instances of 'epoxy' with 'polyaspartic' in the contact section component, including form labels, placeholder text, heading content, and any descriptive text related to the coating service."
-        }
-      ]
-    },
-    {
-      "id": "REQ-28",
-      "summary": "Replace 'epoxy' with 'polyaspartic' in Footer service descriptions and text",
-      "acceptanceCriteria": [
-        "Footer text references 'polyaspartic coating' instead of 'epoxy coating'",
-        "No instances of the word 'epoxy' remain in the Footer component"
-      ],
-      "file_operations": [
+          "description": "Remove any instances of 'crack' or 'cracks' from contact section text and form labels"
+        },
         {
           "path": "frontend/src/components/Footer.tsx",
           "operation": "modify",
-          "description": "Replace all instances of 'epoxy' with 'polyaspartic' in the footer component, including any service descriptions, informational text, and company description content."
+          "description": "Remove any instances of 'crack' or 'cracks' from footer text content"
         }
       ]
     },
     {
-      "id": "REQ-29",
-      "summary": "Replace 'epoxy' with 'polyaspartic' in remaining frontend components and files",
+      "id": "REQ-33",
+      "summary": "Add value proposition tagline to HeroSection",
       "acceptanceCriteria": [
-        "A comprehensive search of all frontend files shows zero remaining instances of the word 'epoxy'",
-        "All text throughout the website consistently uses 'polyaspartic' terminology"
+        "The tagline 'Affordable, Reasonable prices, great quality from start to finish' is visible in the hero section",
+        "The tagline is styled consistently with the existing hero section design",
+        "The tagline is positioned appropriately within the hero layout"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/App.tsx",
+          "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Replace all instances of 'epoxy' with 'polyaspartic' in the App component if any references exist in comments, metadata, or text content."
-        },
+          "description": "Add the tagline 'Affordable, Reasonable prices, great quality from start to finish' as a prominent text element positioned near the main company tagline, styled with appropriate typography that matches the industrial-modern theme and maintains visual hierarchy within the hero section layout"
+        }
+      ]
+    },
+    {
+      "id": "REQ-34",
+      "summary": "Update 'pool' references to 'pool decks' in HeroSection",
+      "acceptanceCriteria": [
+        "All instances of 'pool' in the hero section are updated to 'pool decks'",
+        "The updated text reads naturally and grammatically correct"
+      ],
+      "file_operations": [
         {
-          "path": "frontend/src/components/Navigation.tsx",
+          "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Replace all instances of 'epoxy' with 'polyaspartic' in the Navigation component if any references exist in menu items, labels, or descriptive text."
-        },
-        {
-          "path": "frontend/index.html",
-          "operation": "modify",
-          "description": "Replace all instances of 'epoxy' with 'polyaspartic' in the HTML file, including meta descriptions, title attributes, or any other text content that may reference epoxy coating services."
+          "description": "Replace all instances of 'pool' with 'pool decks' in the tagline and descriptive text, ensuring grammatical correctness and natural phrasing throughout the hero section content"
         }
       ]
     }

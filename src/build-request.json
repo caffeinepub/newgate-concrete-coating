@@ -1,135 +1,65 @@
 {
   "kind": "build_request",
-  "title": "Replace all instances of 'epoxy' with 'polyaspartic' throughout the website",
+  "title": "Remove 'crack' references, add value proposition tagline, and update pool to pool decks",
   "projectName": "NewGate Concrete Coating",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-24",
-      "text": "Replace all instances of the word 'epoxy' with 'polyaspartic' in the HeroSection component, including the tagline and any descriptive text",
+      "id": "REQ-32",
+      "text": "Remove all instances of the words 'crack' and 'cracks' from all website content across all frontend components (HeroSection, ServicesSection, AboutSection, ContactSection, Footer)",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-recent"
-        ],
-        "quotes": [
-          "Could you change the word epoxy to polyaspartic",
-          "To all words that say epoxy",
-          "Yes just the word epoxy don't need to change anything else"
+          "msg-user-remove-crack"
         ]
       },
       "acceptanceCriteria": [
-        "The hero section tagline reads 'polyaspartic coating' instead of 'epoxy coating'",
-        "No instances of the word 'epoxy' remain in the HeroSection component"
+        "No instances of 'crack' or 'cracks' appear in any component text",
+        "Content remains coherent after removal"
       ]
     },
     {
-      "id": "REQ-25",
-      "text": "Replace all instances of 'epoxy' with 'polyaspartic' in the ServicesSection component for all four service names: 'patio polyaspartic coating', 'driveway polyaspartic coating', 'pool deck polyaspartic coating', and 'garage floor polyaspartic coating'",
+      "id": "REQ-33",
+      "text": "Add the tagline 'Affordable, Reasonable prices, great quality from start to finish' to the HeroSection component, displayed prominently near the main company tagline",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-recent"
+          "msg-user-add-tagline"
         ],
         "quotes": [
-          "Could you change the word epoxy to polyaspartic",
-          "To all words that say epoxy"
+          "Affordable, Reasonable prices, great quality from start to finish"
         ]
       },
       "acceptanceCriteria": [
-        "All four service cards display 'polyaspartic coating' instead of 'epoxy coating'",
-        "Service descriptions and feature tags use 'polyaspartic' terminology",
-        "No instances of the word 'epoxy' remain in the ServicesSection component"
+        "The tagline 'Affordable, Reasonable prices, great quality from start to finish' is visible in the hero section",
+        "The tagline is styled consistently with the existing hero section design",
+        "The tagline is positioned appropriately within the hero layout"
       ]
     },
     {
-      "id": "REQ-26",
-      "text": "Replace all instances of 'epoxy' with 'polyaspartic' in the AboutSection component, updating the company expertise description and benefit cards to reference polyaspartic coating applications",
+      "id": "REQ-34",
+      "text": "Update the HeroSection component to change all references from 'pool' to 'pool decks' in the tagline and descriptive text",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-recent"
-        ],
-        "quotes": [
-          "Could you change the word epoxy to polyaspartic",
-          "To all words that say epoxy"
+          "msg-user-pool-decks"
         ]
       },
       "acceptanceCriteria": [
-        "The about section describes expertise in 'polyaspartic coating' instead of 'epoxy coating'",
-        "All benefit descriptions reference 'polyaspartic' where coating type is mentioned",
-        "No instances of the word 'epoxy' remain in the AboutSection component"
-      ]
-    },
-    {
-      "id": "REQ-27",
-      "text": "Replace all instances of 'epoxy' with 'polyaspartic' in the ContactSection component, including the form labels, placeholder text, and any descriptive content",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-recent"
-        ],
-        "quotes": [
-          "Could you change the word epoxy to polyaspartic",
-          "To all words that say epoxy"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Contact form references 'polyaspartic coating' instead of 'epoxy coating'",
-        "No instances of the word 'epoxy' remain in the ContactSection component"
-      ]
-    },
-    {
-      "id": "REQ-28",
-      "text": "Replace all instances of 'epoxy' with 'polyaspartic' in the Footer component, including any service descriptions or informational text",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-recent"
-        ],
-        "quotes": [
-          "Could you change the word epoxy to polyaspartic",
-          "To all words that say epoxy"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Footer text references 'polyaspartic coating' instead of 'epoxy coating'",
-        "No instances of the word 'epoxy' remain in the Footer component"
-      ]
-    },
-    {
-      "id": "REQ-29",
-      "text": "Replace all instances of 'epoxy' with 'polyaspartic' in any remaining frontend components, including App.tsx, Navigation.tsx, and any utility files that contain references to epoxy coating",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-recent"
-        ],
-        "quotes": [
-          "To all words that say epoxy",
-          "Yes just the word epoxy don't need to change anything else"
-        ]
-      },
-      "acceptanceCriteria": [
-        "A comprehensive search of all frontend files shows zero remaining instances of the word 'epoxy'",
-        "All text throughout the website consistently uses 'polyaspartic' terminology"
+        "All instances of 'pool' in the hero section are updated to 'pool decks'",
+        "The updated text reads naturally and grammatically correct"
       ]
     }
   ],
   "constraints": [
-    "Do not modify the company name 'NewGate Concrete Coating'",
-    "Do not change the logo (IMG_2255.jpeg)",
-    "Do not modify or regenerate the existing service images",
-    "Do not change contact information (phone: +1 (813) 608-2563, email: Newgatecoatings@icloud.com)",
-    "Do not change service area locations (Orlando, Tampa, Plant City)",
-    "Only replace the word 'epoxy' with 'polyaspartic' - no other content changes"
+    "Do not modify backend files",
+    "Preserve the existing visual design and layout structure",
+    "Maintain consistency with the industrial-modern theme"
   ],
   "nonGoals": [
-    "Changing the visual design or theme",
-    "Modifying the layout or component structure",
-    "Updating images or generating new assets",
-    "Changing any branding elements beyond the word replacement",
-    "Backend modifications"
+    "Changing any polyaspartic terminology back to epoxy",
+    "Modifying contact information",
+    "Adjusting service area locations"
   ],
   "imageRequirements": {
     "required": [],

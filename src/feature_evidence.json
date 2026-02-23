@@ -2,8 +2,27 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-replace-all-instances-of-the-word-epoxy-with-polyaspartic-in-the-herosection-component-including-the-tagline-and-any-descriptive-text",
-      "featureTitle": "Replace all instances of the word 'epoxy' with 'polyaspartic' in the HeroSection component, including the tagline and any descriptive text",
+      "featureId": "feature-remove-all-instances-of-the-words-crack-and-cracks-from-all-website-content-across-all-frontend-components-herosection-servicessection-aboutsection-contactsection-footer",
+      "featureTitle": "Remove all instances of the words 'crack' and 'cracks' from all website content across all frontend components (HeroSection, ServicesSection, AboutSection, ContactSection, Footer)",
+      "files": [
+        "frontend/src/components/HeroSection.tsx",
+        "frontend/src/components/ServicesSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-32"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-the-tagline-affordable-reasonable-prices-great-quality-from-start-to-finish-to-the-herosection-component-displayed-prominently-near-the-main-company-tagline",
+      "featureTitle": "Add the tagline 'Affordable, Reasonable prices, great quality from start to finish' to the HeroSection component, displayed prominently near the main company tagline",
       "files": [
         "frontend/src/components/HeroSection.tsx"
       ],
@@ -15,15 +34,15 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-24"
+        "REQ-33"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-replace-all-instances-of-epoxy-with-polyaspartic-in-the-servicessection-component-for-all-four-service-names-patio-polyaspartic-coating-driveway-polyaspartic-coating-pool-deck-polyaspartic-coating-and-garage-floor-polyaspartic-coating",
-      "featureTitle": "Replace all instances of 'epoxy' with 'polyaspartic' in the ServicesSection component for all four service names: 'patio polyaspartic coating', 'driveway polyaspartic coating', 'pool deck polyaspartic coating', and 'garage floor polyaspartic coating'",
+      "featureId": "feature-update-the-herosection-component-to-change-all-references-from-pool-to-pool-decks-in-the-tagline-and-descriptive-text",
+      "featureTitle": "Update the HeroSection component to change all references from 'pool' to 'pool decks' in the tagline and descriptive text",
       "files": [
-        "frontend/src/components/ServicesSection.tsx"
+        "frontend/src/components/HeroSection.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -33,43 +52,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-25"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-replace-all-instances-of-epoxy-with-polyaspartic-in-the-aboutsection-component-updating-the-company-expertise-description-and-benefit-cards-to-reference-polyaspartic-coating-applications",
-      "featureTitle": "Replace all instances of 'epoxy' with 'polyaspartic' in the AboutSection component, updating the company expertise description and benefit cards to reference polyaspartic coating applications",
-      "files": [
-        "frontend/src/components/AboutSection.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-26"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-replace-all-instances-of-epoxy-with-polyaspartic-in-the-footer-component-including-any-service-descriptions-or-informational-text",
-      "featureTitle": "Replace all instances of 'epoxy' with 'polyaspartic' in the Footer component, including any service descriptions or informational text",
-      "files": [
-        "frontend/src/components/Footer.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-28"
+        "REQ-34"
       ],
       "confidence": "high"
     }

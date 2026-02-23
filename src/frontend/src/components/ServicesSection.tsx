@@ -9,7 +9,7 @@ const services = [
   },
   {
     title: 'Driveway Polyaspartic Coating',
-    description: 'Protect your driveway from oil stains, cracks, and wear with industrial-strength polyaspartic that enhances curb appeal.',
+    description: 'Protect your driveway from oil stains and wear with industrial-strength polyaspartic that enhances curb appeal.',
     image: '/assets/generated/driveway-residential.dim_800x600.png',
     features: ['High Traffic Durability', 'Chemical Resistant', 'Long-lasting Finish'],
   },

@@ -102,8 +102,12 @@ export default function ContactSection() {
                       <MapPin className="text-copper" size={20} />
                     </div>
                     <div>
-                      <div className="font-semibold text-foreground">Service Area</div>
-                      <div className="text-muted-foreground">Serving the Greater Metro Area</div>
+                      <div className="font-semibold text-foreground">Service Areas</div>
+                      <div className="text-muted-foreground space-y-1">
+                        <div>Orlando, FL</div>
+                        <div>Tampa, FL</div>
+                        <div>Plant City, FL</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -196,10 +200,10 @@ export default function ContactSection() {
                         <SelectValue placeholder="Select a service" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="patio">Patio Epoxy Coating</SelectItem>
-                        <SelectItem value="driveway">Driveway Epoxy Coating</SelectItem>
-                        <SelectItem value="pool">Pool Deck Coating</SelectItem>
-                        <SelectItem value="garage">Garage Floor Coating</SelectItem>
+                        <SelectItem value="patio">Patio Polyaspartic Coating</SelectItem>
+                        <SelectItem value="driveway">Driveway Polyaspartic Coating</SelectItem>
+                        <SelectItem value="pool">Pool Deck Polyaspartic Coating</SelectItem>
+                        <SelectItem value="garage">Garage Floor Polyaspartic Coating</SelectItem>
                         <SelectItem value="other">Other / Multiple Services</SelectItem>
                       </SelectContent>
                     </Select>

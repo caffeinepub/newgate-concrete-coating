@@ -27,8 +27,11 @@ export default function HeroSection() {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             NewGate Concrete Coating
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-            Premium Polyaspartic Coating Solutions for Patios, Driveways, Pools & Garages
+          <p className="text-xl md:text-2xl text-white/90 mb-4 leading-relaxed">
+            Premium Polyaspartic Coating Solutions for Patios, Driveways, Pool Decks & Garages
+          </p>
+          <p className="text-lg md:text-xl text-copper font-semibold mb-6">
+            Affordable, Reasonable prices, great quality from start to finish
           </p>
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
             Transform your concrete surfaces with durable, beautiful polyaspartic coatings that protect and enhance your property for years to come.

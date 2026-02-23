@@ -1,14 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Replace all instances of the word "epoxy" with "polyaspartic" throughout the entire website.
+**Goal:** Remove 'crack' references from website content, add value proposition tagline to hero section, and update 'pool' terminology to 'pool decks'.
 
 **Planned changes:**
-- Update HeroSection to use "polyaspartic coating" terminology
-- Update ServicesSection service names and descriptions to reference "polyaspartic coating"
-- Update AboutSection company expertise and benefit descriptions to use "polyaspartic" terminology
-- Update ContactSection form and descriptive content to reference "polyaspartic coating"
-- Update Footer service descriptions to use "polyaspartic coating"
-- Replace any remaining instances of "epoxy" in all other frontend components
+- Remove all instances of 'crack' and 'cracks' from all frontend components (HeroSection, ServicesSection, AboutSection, ContactSection, Footer)
+- Add tagline "Affordable, Reasonable prices, great quality from start to finish" prominently in the HeroSection
+- Update all 'pool' references to 'pool decks' in the HeroSection
 
-**User-visible outcome:** All text throughout the website will consistently display "polyaspartic" instead of "epoxy" when referring to the coating type, while maintaining all other content, branding, and design elements unchanged.
+**User-visible outcome:** The website will no longer mention cracks, will prominently display the new value proposition tagline in the hero section, and will consistently refer to pool deck services instead of pool services.
