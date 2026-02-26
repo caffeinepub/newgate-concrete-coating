@@ -1,32 +1,21 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "Website project featuring a Flake Colors section with 17 custom uploaded color images (Tidal Wave, Gravel Blend, Coyote Blend, Wombat Blend, Stargazer Blend, Outback Blend, Orbit Blend, Safari Blend, Creekbed Blend, Nightfall, Glacier Blend, Stonewash Blend, Shoreline Blend, Domino Blend, Cabin Fever, Feather Gray Blend, Autumn Brown Blend) replacing Simiron-hosted images.",
-  "architectural_notes": [
-    "Flake Colors section contains 17 color options: Tidal Wave, Gravel Blend, Coyote Blend, Wombat Blend, Stargazer Blend, Outback Blend, Orbit Blend, Safari Blend, Creekbed Blend, Nightfall, Glacier Blend, Stonewash Blend, Shoreline Blend, Domino Blend, Cabin Fever, Feather Gray Blend, Autumn Brown Blend",
-    "Flake color images are user-uploaded (IMG_2262–IMG_2275 series) and should not reference external Simiron product page"
-  ],
+  "summary": "New project",
+  "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-replace-all-simiron-cdn-hosted-images-in-the-flakecolorssection-component-with-the-17-user-uploaded-images-stored-as-static-assets-in-frontend-public-assets-generated-mapped-to-their-confirmed-color-names-in-this-exact-order-1-tidal-wave-img-2262-jpeg-2-gravel-blend-img-2260-jpeg-3-coyote-blend-img-2261-jpeg-4-wombat-blend-img-2259-jpeg-5-stargazer-blend-img-2263-jpeg-6-outback-blend-img-2266-jpeg-7-orbit-blend-img-2267-jpeg-8-safari-blend-img-2265-jpeg-9-creekbed-blend-img-2270-jpeg-10-nightfall-img-2268-jpeg-11-glacier-blend-img-2272-jpeg-12-stonewash-blend-img-2273-jpeg-13-shoreline-blend-img-2264-jpeg-14-domino-blend-img-2269-jpeg-15-cabin-fever-img-2275-jpeg-16-feather-gray-blend-img-2274-jpeg-17-autumn-brown-blend-img-2271-jpeg-remove-all-unsplash-fallback-urls-use-only-the-local-asset-paths",
-      "title": "Replace all Simiron CDN-hosted images in the FlakeColorsSection component with the 17 user-uploaded images stored as static assets in frontend/public/assets/generated, mapped to their confirmed color names in this exact order: 1. Tidal Wave (IMG_2262.jpeg), 2. Gravel Blend (IMG_2260.jpeg), 3. Coyote Blend (IMG_2261.jpeg), 4. Wombat Blend (IMG_2259.jpeg), 5. Stargazer Blend (IMG_2263.jpeg), 6. Outback Blend (IMG_2266.jpeg), 7. Orbit Blend (IMG_2267.jpeg), 8. Safari Blend (IMG_2265.jpeg), 9. Creekbed Blend (IMG_2270.jpeg), 10. Nightfall (IMG_2268.jpeg), 11. Glacier Blend (IMG_2272.jpeg), 12. Stonewash Blend (IMG_2273.jpeg), 13. Shoreline Blend (IMG_2264.jpeg), 14. Domino Blend (IMG_2269.jpeg), 15. Cabin Fever (IMG_2275.jpeg), 16. Feather Gray Blend (IMG_2274.jpeg), 17. Autumn Brown Blend (IMG_2271.jpeg). Remove all Unsplash fallback URLs. Use only the local asset paths.",
+      "id": "feature-in-the-aboutsection-component-update-the-text-10-years-experience-to-7-years-experience",
+      "title": "In the AboutSection component, update the text '10+ years experience' to '7+ years experience'.",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
     }
   ],
-  "new_feature_requests": [
-    {
-      "id": "AR-1",
-      "summary": "Replace Simiron-hosted flake color images with 17 user-uploaded images in the Flake Colors section",
-      "reqIds": [],
-      "status": "pending"
-    }
-  ],
-  "gameProjectType": "none",
+  "new_feature_requests": [],
   "projectName": "NewGate Concrete Coating",
   "clarification_mode": "instant",
   "clarification_rounds": 0

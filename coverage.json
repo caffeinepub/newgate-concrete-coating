@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-26T01:51:55.831Z",
+  "generatedAt": "2026-02-26T02:02:21.583Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -12,13 +12,13 @@
     "items": [
       {
         "id": "REQ-1",
-        "summary": "Replace all Simiron CDN-hosted images in the FlakeColorsSection component with the 17 user-uploaded images stored as static assets in frontend/public/assets/generated, mapped to their confirmed color names in this exact order: 1. Tidal Wave (IMG_2262.jpeg), 2. Gravel Blend (IMG_2260.jpeg), 3. Coyote Blend (IMG_2261.jpeg), 4. Wombat Blend (IMG_2259.jpeg), 5. Stargazer Blend (IMG_2263.jpeg), 6. Outback Blend (IMG_2266.jpeg), 7. Orbit Blend (IMG_2267.jpeg), 8. Safari Blend (IMG_2265.jpeg), 9. Creekbed Blend (IMG_2270.jpeg), 10. Nightfall (IMG_2268.jpeg), 11. Glacier Blend (IMG_2272.jpeg), 12. Stonewash Blend (IMG_2273.jpeg), 13. Shoreline Blend (IMG_2264.jpeg), 14. Domino Blend (IMG_2269.jpeg), 15. Cabin Fever (IMG_2275.jpeg), 16. Feather Gray Blend (IMG_2274.jpeg), 17. Autumn Brown Blend (IMG_2271.jpeg). Remove all Unsplash fallback URLs. Use only the local asset paths.",
+        "summary": "In the AboutSection component, update the text '10+ years experience' to '7+ years experience'.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/FlakeColorsSection.tsx"
+          "frontend/src/components/AboutSection.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/FlakeColorsSection.tsx"
+          "frontend/src/components/AboutSection.tsx"
         ]
       }
     ]
@@ -28,7 +28,7 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/FlakeColorsSection.tsx",
+    "frontend/src/components/AboutSection.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

@@ -91,7 +91,7 @@ export default function AboutSection() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
               <div className="text-center">
-                <div className="text-4xl font-bold text-copper mb-2">10+</div>
+                <div className="text-4xl font-bold text-copper mb-2">7+</div>
                 <div className="text-white/80">Years Experience</div>
               </div>
               <div className="text-center">

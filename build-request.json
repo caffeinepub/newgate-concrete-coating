@@ -1,45 +1,32 @@
 {
   "kind": "build_request",
-  "title": "Replace Simiron-hosted flake color images with 17 user-uploaded images",
+  "title": "Update experience years from 10+ to 7+",
   "projectName": "NewGate Concrete Coating",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Replace all Simiron CDN-hosted images in the FlakeColorsSection component with the 17 user-uploaded images stored as static assets in frontend/public/assets/generated, mapped to their confirmed color names in this exact order: 1. Tidal Wave (IMG_2262.jpeg), 2. Gravel Blend (IMG_2260.jpeg), 3. Coyote Blend (IMG_2261.jpeg), 4. Wombat Blend (IMG_2259.jpeg), 5. Stargazer Blend (IMG_2263.jpeg), 6. Outback Blend (IMG_2266.jpeg), 7. Orbit Blend (IMG_2267.jpeg), 8. Safari Blend (IMG_2265.jpeg), 9. Creekbed Blend (IMG_2270.jpeg), 10. Nightfall (IMG_2268.jpeg), 11. Glacier Blend (IMG_2272.jpeg), 12. Stonewash Blend (IMG_2273.jpeg), 13. Shoreline Blend (IMG_2264.jpeg), 14. Domino Blend (IMG_2269.jpeg), 15. Cabin Fever (IMG_2275.jpeg), 16. Feather Gray Blend (IMG_2274.jpeg), 17. Autumn Brown Blend (IMG_2271.jpeg). Remove all Unsplash fallback URLs. Use only the local asset paths.",
+      "text": "In the AboutSection component, update the text '10+ years experience' to '7+ years experience'.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-user-color-order",
-          "msg-user-correct",
-          "msg-user-build"
+          "msg-4",
+          "msg-6"
         ],
         "quotes": [
-          "All images are in order with the name of colors you provided in the Flake Color Section",
-          "This is the correct order",
-          "Correct"
+          "Can we change the 10+ years experience to 7+ years instead"
         ]
       },
       "acceptanceCriteria": [
-        "All 17 flake color cards in the FlakeColorsSection display the user-uploaded images instead of any Simiron CDN or Unsplash URLs",
-        "Each image is correctly matched to its confirmed color name in the specified order",
-        "Images load from frontend/public/assets/generated using local paths only",
-        "No external image dependencies (Simiron CDN or Unsplash) remain in FlakeColorsSection",
-        "The responsive grid layout and color name labels are preserved exactly as before"
+        "The AboutSection no longer displays '10+ years experience' anywhere on the page.",
+        "The AboutSection displays '7+ years experience' in the same location and style as before."
       ]
     }
   ],
-  "constraints": [
-    "Do not change the FlakeColorsSection layout, grid structure, or any other visual design",
-    "Do not modify any backend files",
-    "Do not alter the color name labels — they must remain exactly as confirmed by the user",
-    "Image order must strictly follow the user-confirmed sequence"
-  ],
+  "constraints": [],
   "nonGoals": [
-    "Redesigning the Flake Colors section",
-    "Adding new colors or removing existing ones",
-    "Any changes to other sections of the site",
-    "Backend changes"
+    "Changing any other text, layout, or styling on the page.",
+    "Adding new sections or features."
   ],
   "imageRequirements": {
     "required": [],
