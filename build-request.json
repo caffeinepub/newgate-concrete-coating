@@ -1,32 +1,30 @@
 {
   "kind": "build_request",
-  "title": "Update experience years from 10+ to 7+",
-  "projectName": "NewGate Concrete Coating",
+  "title": "Fix text capitalization in hero section tagline",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "In the AboutSection component, update the text '10+ years experience' to '7+ years experience'.",
+      "text": "Update the tagline text in HeroSection from 'Affordable, Reasonable prices, great quality from start to finish' to 'Affordable, Reasonable Prices, Great Quality From Start to Finish'.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4",
-          "msg-6"
+          "msg-4"
         ],
         "quotes": [
-          "Can we change the 10+ years experience to 7+ years instead"
+          "Affordable, Reasonable Prices, Great Quality From Start to Finish"
         ]
       },
       "acceptanceCriteria": [
-        "The AboutSection no longer displays '10+ years experience' anywhere on the page.",
-        "The AboutSection displays '7+ years experience' in the same location and style as before."
+        "The tagline in the HeroSection reads exactly: 'Affordable, Reasonable Prices, Great Quality From Start to Finish'",
+        "No other text or layout in the HeroSection is changed"
       ]
     }
   ],
   "constraints": [],
   "nonGoals": [
-    "Changing any other text, layout, or styling on the page.",
-    "Adding new sections or features."
+    "Changes to any other section or component",
+    "Layout or styling modifications"
   ],
   "imageRequirements": {
     "required": [],

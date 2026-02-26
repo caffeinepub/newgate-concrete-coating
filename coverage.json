@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-26T02:02:21.583Z",
+  "generatedAt": "2026-02-26T02:29:04.192Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -12,13 +12,13 @@
     "items": [
       {
         "id": "REQ-1",
-        "summary": "In the AboutSection component, update the text '10+ years experience' to '7+ years experience'.",
+        "summary": "Update the tagline text in HeroSection from 'Affordable, Reasonable prices, great quality from start to finish' to 'Affordable, Reasonable Prices, Great Quality From Start to Finish'.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/AboutSection.tsx"
+          "frontend/src/components/HeroSection.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/AboutSection.tsx"
+          "frontend/src/components/HeroSection.tsx"
         ]
       }
     ]
@@ -28,7 +28,7 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/AboutSection.tsx",
+    "frontend/src/components/HeroSection.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

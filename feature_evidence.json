@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-in-the-aboutsection-component-update-the-text-10-years-experience-to-7-years-experience",
-      "featureTitle": "In the AboutSection component, update the text '10+ years experience' to '7+ years experience'.",
+      "featureId": "feature-update-the-tagline-text-in-herosection-from-affordable-reasonable-prices-great-quality-from-start-to-finish-to-affordable-reasonable-prices-great-quality-from-start-to-finish",
+      "featureTitle": "Update the tagline text in HeroSection from 'Affordable, Reasonable prices, great quality from start to finish' to 'Affordable, Reasonable Prices, Great Quality From Start to Finish'.",
       "files": [
-        "frontend/src/components/AboutSection.tsx"
+        "frontend/src/components/HeroSection.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",

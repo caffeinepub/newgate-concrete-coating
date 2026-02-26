@@ -1,9 +1,9 @@
 # Specification
 
 ## Summary
-**Goal:** Update the years of experience displayed in the AboutSection from 10+ to 7+.
+**Goal:** Fix text capitalization in the hero section tagline.
 
 **Planned changes:**
-- Change the text "10+ years experience" to "7+ years experience" in the AboutSection component.
+- Update the tagline in HeroSection from `'Affordable, Reasonable prices, great quality from start to finish'` to `'Affordable, Reasonable Prices, Great Quality From Start to Finish'`
 
-**User-visible outcome:** The About section of the site now shows "7+ years experience" instead of "10+ years experience."
+**User-visible outcome:** The hero section tagline displays with correct title-case capitalization.

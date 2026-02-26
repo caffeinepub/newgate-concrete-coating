@@ -22,7 +22,7 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 z-10 text-center">
+      <div className="container mx-auto px-4 z-10 text-center pt-24">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             NewGate Concrete Coating
@@ -31,7 +31,7 @@ export default function HeroSection() {
             Premium Polyaspartic Coating Solutions for Patios, Driveways, Pool Decks & Garages
           </p>
           <p className="text-lg md:text-xl text-copper font-semibold mb-6">
-            Affordable, Reasonable prices, great quality from start to finish
+            Affordable, Reasonable Prices, Great Quality From Start to Finish
           </p>
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
             Transform your concrete surfaces with durable, beautiful polyaspartic coatings that protect and enhance your property for years to come.

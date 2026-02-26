@@ -7,8 +7,8 @@
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-in-the-aboutsection-component-update-the-text-10-years-experience-to-7-years-experience",
-      "title": "In the AboutSection component, update the text '10+ years experience' to '7+ years experience'.",
+      "id": "feature-update-the-tagline-text-in-herosection-from-affordable-reasonable-prices-great-quality-from-start-to-finish-to-affordable-reasonable-prices-great-quality-from-start-to-finish",
+      "title": "Update the tagline text in HeroSection from 'Affordable, Reasonable prices, great quality from start to finish' to 'Affordable, Reasonable Prices, Great Quality From Start to Finish'.",
       "reqIds": [
         "REQ-1"
       ],
@@ -16,7 +16,7 @@
     }
   ],
   "new_feature_requests": [],
-  "projectName": "NewGate Concrete Coating",
+  "projectName": "Fix text capitalization in hero section tagline",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

@@ -1,8 +1,8 @@
 import Navigation from "./components/Navigation";
 import HeroSection from "./components/HeroSection";
+import AboutSection from "./components/AboutSection";
 import ServicesSection from "./components/ServicesSection";
 import FlakeColorsSection from "./components/FlakeColorsSection";
-import AboutSection from "./components/AboutSection";
 import ContactSection from "./components/ContactSection";
 import ReviewsSection from "./components/ReviewsSection";
 import Footer from "./components/Footer";
@@ -13,9 +13,9 @@ function App() {
       <Navigation />
       <main>
         <HeroSection />
+        <AboutSection />
         <ServicesSection />
         <FlakeColorsSection />
-        <AboutSection />
         <ContactSection />
         <ReviewsSection />
       </main>

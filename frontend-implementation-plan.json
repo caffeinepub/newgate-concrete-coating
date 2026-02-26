@@ -1,20 +1,20 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Update experience years from 10+ to 7+",
+  "title": "Fix text capitalization in hero section tagline",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Update the AboutSection component to display '7+ years experience' instead of '10+ years experience'",
+      "summary": "Update the tagline text in HeroSection to use proper capitalization",
       "acceptanceCriteria": [
-        "The AboutSection no longer displays '10+ years experience' anywhere on the page.",
-        "The AboutSection displays '7+ years experience' in the same location and style as before."
+        "The tagline in the HeroSection reads exactly: 'Affordable, Reasonable Prices, Great Quality From Start to Finish'",
+        "No other text or layout in the HeroSection is changed"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/AboutSection.tsx",
+          "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Locate the text '10+ years experience' in the AboutSection component and replace it with '7+ years experience', preserving all existing styling and layout."
+          "description": "Change the tagline text from 'Affordable, Reasonable prices, great quality from start to finish' to 'Affordable, Reasonable Prices, Great Quality From Start to Finish' by updating the string literal in the component's JSX. Ensure only the tagline text content is modified with no changes to styling, layout, or other elements."
         }
       ]
     }
