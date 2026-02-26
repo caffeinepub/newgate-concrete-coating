@@ -1,0 +1,86 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-23T22:19:21.512Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 5,
+    "implemented": 4,
+    "items": [
+      {
+        "id": "REQ-35",
+        "summary": "Create a new ReviewsSection component positioned after the AboutSection in the App.tsx layout",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/ReviewsSection.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/ReviewsSection.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-36",
+        "summary": "Build a review submission form in the ReviewsSection component with fields for star rating (1-5), customer name, service type dropdown, and written feedback textarea",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/ReviewsSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/ReviewsSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-37",
+        "summary": "Add backend functions in backend/main.mo to submit, retrieve, and list customer reviews with fields for rating (Nat8), customerName (Text), serviceType (Text), feedback (Text), and timestamp (Int)",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-38",
+        "summary": "Create React Query hooks in frontend/src/hooks/useQueries.ts for submitting reviews and fetching all reviews from the backend actor",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/hooks/useQueries.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/hooks/useQueries.ts"
+        ]
+      },
+      {
+        "id": "REQ-39",
+        "summary": "Display all submitted reviews in the ReviewsSection component showing star rating, customer name, service type, feedback text, and submission date for each review",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/ReviewsSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/ReviewsSection.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/ReviewsSection.tsx",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useQueries.ts",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}
