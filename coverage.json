@@ -1,83 +1,34 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-23T22:19:21.512Z",
+  "generatedAt": "2026-02-26T01:51:55.831Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 5,
-    "implemented": 4,
+    "total": 1,
+    "implemented": 1,
     "items": [
       {
-        "id": "REQ-35",
-        "summary": "Create a new ReviewsSection component positioned after the AboutSection in the App.tsx layout",
+        "id": "REQ-1",
+        "summary": "Replace all Simiron CDN-hosted images in the FlakeColorsSection component with the 17 user-uploaded images stored as static assets in frontend/public/assets/generated, mapped to their confirmed color names in this exact order: 1. Tidal Wave (IMG_2262.jpeg), 2. Gravel Blend (IMG_2260.jpeg), 3. Coyote Blend (IMG_2261.jpeg), 4. Wombat Blend (IMG_2259.jpeg), 5. Stargazer Blend (IMG_2263.jpeg), 6. Outback Blend (IMG_2266.jpeg), 7. Orbit Blend (IMG_2267.jpeg), 8. Safari Blend (IMG_2265.jpeg), 9. Creekbed Blend (IMG_2270.jpeg), 10. Nightfall (IMG_2268.jpeg), 11. Glacier Blend (IMG_2272.jpeg), 12. Stonewash Blend (IMG_2273.jpeg), 13. Shoreline Blend (IMG_2264.jpeg), 14. Domino Blend (IMG_2269.jpeg), 15. Cabin Fever (IMG_2275.jpeg), 16. Feather Gray Blend (IMG_2274.jpeg), 17. Autumn Brown Blend (IMG_2271.jpeg). Remove all Unsplash fallback URLs. Use only the local asset paths.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/ReviewsSection.tsx",
-          "frontend/src/App.tsx"
+          "frontend/src/components/FlakeColorsSection.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/ReviewsSection.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-36",
-        "summary": "Build a review submission form in the ReviewsSection component with fields for star rating (1-5), customer name, service type dropdown, and written feedback textarea",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/ReviewsSection.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/ReviewsSection.tsx"
-        ]
-      },
-      {
-        "id": "REQ-37",
-        "summary": "Add backend functions in backend/main.mo to submit, retrieve, and list customer reviews with fields for rating (Nat8), customerName (Text), serviceType (Text), feedback (Text), and timestamp (Int)",
-        "status": "unknown",
-        "plannedFiles": [],
-        "matchedFiles": []
-      },
-      {
-        "id": "REQ-38",
-        "summary": "Create React Query hooks in frontend/src/hooks/useQueries.ts for submitting reviews and fetching all reviews from the backend actor",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/hooks/useQueries.ts"
-        ],
-        "matchedFiles": [
-          "frontend/src/hooks/useQueries.ts"
-        ]
-      },
-      {
-        "id": "REQ-39",
-        "summary": "Display all submitted reviews in the ReviewsSection component showing star rating, customer name, service type, feedback text, and submission date for each review",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/ReviewsSection.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/ReviewsSection.tsx"
+          "frontend/src/components/FlakeColorsSection.tsx"
         ]
       }
     ]
   },
   "changedFiles": [
-    "backend/main.mo",
     "build-request.json",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/App.tsx",
-    "frontend/src/backend.d.ts",
-    "frontend/src/backend.ts",
-    "frontend/src/components/ReviewsSection.tsx",
-    "frontend/src/declarations/backend.did.d.ts",
-    "frontend/src/declarations/backend.did.js",
-    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/components/FlakeColorsSection.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

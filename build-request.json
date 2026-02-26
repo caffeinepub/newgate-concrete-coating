@@ -1,122 +1,45 @@
 {
   "kind": "build_request",
-  "title": "Add customer review system with submission form and public display",
+  "title": "Replace Simiron-hosted flake color images with 17 user-uploaded images",
   "projectName": "NewGate Concrete Coating",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-35",
-      "text": "Create a new ReviewsSection component positioned after the AboutSection in the App.tsx layout",
+      "id": "REQ-1",
+      "text": "Replace all Simiron CDN-hosted images in the FlakeColorsSection component with the 17 user-uploaded images stored as static assets in frontend/public/assets/generated, mapped to their confirmed color names in this exact order: 1. Tidal Wave (IMG_2262.jpeg), 2. Gravel Blend (IMG_2260.jpeg), 3. Coyote Blend (IMG_2261.jpeg), 4. Wombat Blend (IMG_2259.jpeg), 5. Stargazer Blend (IMG_2263.jpeg), 6. Outback Blend (IMG_2266.jpeg), 7. Orbit Blend (IMG_2267.jpeg), 8. Safari Blend (IMG_2265.jpeg), 9. Creekbed Blend (IMG_2270.jpeg), 10. Nightfall (IMG_2268.jpeg), 11. Glacier Blend (IMG_2272.jpeg), 12. Stonewash Blend (IMG_2273.jpeg), 13. Shoreline Blend (IMG_2264.jpeg), 14. Domino Blend (IMG_2269.jpeg), 15. Cabin Fever (IMG_2275.jpeg), 16. Feather Gray Blend (IMG_2274.jpeg), 17. Autumn Brown Blend (IMG_2271.jpeg). Remove all Unsplash fallback URLs. Use only the local asset paths.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "msg-user-color-order",
+          "msg-user-correct",
+          "msg-user-build"
         ],
         "quotes": [
-          "Yes a new dedicated section on the homepage after the about section"
+          "All images are in order with the name of colors you provided in the Flake Color Section",
+          "This is the correct order",
+          "Correct"
         ]
       },
       "acceptanceCriteria": [
-        "ReviewsSection component exists in frontend/src/components/",
-        "Component is imported and rendered in App.tsx after AboutSection",
-        "Section has a distinct visual design consistent with existing sections"
-      ]
-    },
-    {
-      "id": "REQ-36",
-      "text": "Build a review submission form in the ReviewsSection component with fields for star rating (1-5), customer name, service type dropdown, and written feedback textarea",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ],
-        "quotes": [
-          "let them write a 1-5 star review with their name and service type and how we did"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Form includes star rating selector with 1-5 star options",
-        "Form includes text input for customer name",
-        "Form includes dropdown for service type matching existing services (Patio Polyaspartic Coating, Driveway Polyaspartic Coating, Pool Deck Polyaspartic Coating, Garage Floor Polyaspartic Coating)",
-        "Form includes textarea for written feedback about customer experience",
-        "Form has validation requiring all fields before submission",
-        "Form displays success message after successful submission"
-      ]
-    },
-    {
-      "id": "REQ-37",
-      "text": "Add backend functions in backend/main.mo to submit, retrieve, and list customer reviews with fields for rating (Nat8), customerName (Text), serviceType (Text), feedback (Text), and timestamp (Int)",
-      "target": "backend",
-      "source": {
-        "messageIds": [
-          "msg-3"
-        ],
-        "quotes": [
-          "Let the reviews be Displayed to all visitors to the website"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Review type defined in backend/main.mo with id, rating, customerName, serviceType, feedback, and timestamp fields",
-        "submitReview function accepts review data and stores it in a Map with auto-incrementing ID",
-        "getAllReviews function returns array of all stored reviews sorted by timestamp (newest first)",
-        "Reviews persist across canister upgrades"
-      ]
-    },
-    {
-      "id": "REQ-38",
-      "text": "Create React Query hooks in frontend/src/hooks/useQueries.ts for submitting reviews and fetching all reviews from the backend actor",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-3"
-        ],
-        "quotes": [
-          "Let the reviews be Displayed to all visitors to the website"
-        ]
-      },
-      "acceptanceCriteria": [
-        "useSubmitReview mutation hook calls backend submitReview function",
-        "useGetAllReviews query hook calls backend getAllReviews function",
-        "Query automatically refetches after successful review submission",
-        "Hooks follow existing pattern from useQueries.ts"
-      ]
-    },
-    {
-      "id": "REQ-39",
-      "text": "Display all submitted reviews in the ReviewsSection component showing star rating, customer name, service type, feedback text, and submission date for each review",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-3"
-        ],
-        "quotes": [
-          "all submitted reviews will be stored in the backend (Motoko canister) and displayed on the website for all visitors to see"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Reviews displayed in card layout with visual hierarchy",
-        "Star rating shown visually (filled/empty stars)",
-        "Customer name and service type clearly labeled",
-        "Feedback text displayed prominently",
-        "Reviews sorted by date with newest first",
-        "Empty state shown when no reviews exist yet",
-        "Loading state shown while fetching reviews"
+        "All 17 flake color cards in the FlakeColorsSection display the user-uploaded images instead of any Simiron CDN or Unsplash URLs",
+        "Each image is correctly matched to its confirmed color name in the specified order",
+        "Images load from frontend/public/assets/generated using local paths only",
+        "No external image dependencies (Simiron CDN or Unsplash) remain in FlakeColorsSection",
+        "The responsive grid layout and color name labels are preserved exactly as before"
       ]
     }
   ],
   "constraints": [
-    "Maintain single-actor architecture in backend/main.mo",
-    "Follow existing patterns from ContactSection.tsx for form validation and submission",
-    "Use existing color palette and styling from tailwind.config.js",
-    "Match service type options exactly with those in ContactSection dropdown"
+    "Do not change the FlakeColorsSection layout, grid structure, or any other visual design",
+    "Do not modify any backend files",
+    "Do not alter the color name labels — they must remain exactly as confirmed by the user",
+    "Image order must strictly follow the user-confirmed sequence"
   ],
   "nonGoals": [
-    "Review moderation or approval workflow",
-    "User authentication for submitting reviews",
-    "Editing or deleting reviews after submission",
-    "Photo uploads with reviews",
-    "Reply functionality from business owner",
-    "Review filtering or sorting by rating"
+    "Redesigning the Flake Colors section",
+    "Adding new colors or removing existing ones",
+    "Any changes to other sections of the site",
+    "Backend changes"
   ],
   "imageRequirements": {
     "required": [],

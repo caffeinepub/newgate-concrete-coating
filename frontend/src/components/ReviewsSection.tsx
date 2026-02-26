@@ -100,8 +100,47 @@ export default function ReviewsSection() {
             </p>
           </div>
 
+          {/* Reviews Display */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-foreground mb-8">What Our Customers Say</h3>
+            
+            {isLoading ? (
+              <div className="flex justify-center items-center py-12">
+                <Loader2 className="h-8 w-8 animate-spin text-copper" />
+              </div>
+            ) : sortedReviews.length === 0 ? (
+              <div className="text-center py-12 bg-concrete-light rounded-lg border border-border">
+                <p className="text-muted-foreground text-lg">
+                  No reviews yet. Be the first to share your experience!
+                </p>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {sortedReviews.map((review, index) => (
+                  <Card key={index} className="border-border hover:shadow-lg transition-shadow">
+                    <CardContent className="p-6">
+                      <div className="flex items-start justify-between mb-4">
+                        <div>
+                          <h4 className="font-bold text-foreground text-lg">{review.customerName}</h4>
+                          <p className="text-sm text-muted-foreground">{review.serviceType}</p>
+                        </div>
+                        {renderStars(review.rating)}
+                      </div>
+                      
+                      <p className="text-foreground mb-4 leading-relaxed">{review.feedback}</p>
+                      
+                      <p className="text-xs text-muted-foreground">
+                        {formatDate(review.timestamp)}
+                      </p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            )}
+          </div>
+
           {/* Review Submission Form */}
-          <div className="bg-concrete-light rounded-lg p-8 shadow-lg border border-border mb-16">
+          <div className="bg-concrete-light rounded-lg p-8 shadow-lg border border-border">
             <h3 className="text-2xl font-bold text-foreground mb-6">Write a Review</h3>
             
             {isSubmitted ? (
@@ -191,45 +230,6 @@ export default function ReviewsSection() {
                   </p>
                 )}
               </form>
-            )}
-          </div>
-
-          {/* Reviews Display */}
-          <div>
-            <h3 className="text-2xl font-bold text-foreground mb-8">What Our Customers Say</h3>
-            
-            {isLoading ? (
-              <div className="flex justify-center items-center py-12">
-                <Loader2 className="h-8 w-8 animate-spin text-copper" />
-              </div>
-            ) : sortedReviews.length === 0 ? (
-              <div className="text-center py-12 bg-concrete-light rounded-lg border border-border">
-                <p className="text-muted-foreground text-lg">
-                  No reviews yet. Be the first to share your experience!
-                </p>
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {sortedReviews.map((review, index) => (
-                  <Card key={index} className="border-border hover:shadow-lg transition-shadow">
-                    <CardContent className="p-6">
-                      <div className="flex items-start justify-between mb-4">
-                        <div>
-                          <h4 className="font-bold text-foreground text-lg">{review.customerName}</h4>
-                          <p className="text-sm text-muted-foreground">{review.serviceType}</p>
-                        </div>
-                        {renderStars(review.rating)}
-                      </div>
-                      
-                      <p className="text-foreground mb-4 leading-relaxed">{review.feedback}</p>
-                      
-                      <p className="text-xs text-muted-foreground">
-                        {formatDate(review.timestamp)}
-                      </p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
             )}
           </div>
         </div>

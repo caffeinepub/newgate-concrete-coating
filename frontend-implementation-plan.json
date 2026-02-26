@@ -1,82 +1,23 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Add customer review system with submission form and public display",
+  "title": "Replace Simiron-hosted flake color images with 17 user-uploaded images",
   "requirements": [
     {
-      "id": "REQ-35",
-      "summary": "Create a new ReviewsSection component positioned after the AboutSection in the App.tsx layout",
+      "id": "REQ-1",
+      "summary": "Replace all Simiron CDN-hosted images in the FlakeColorsSection component with 17 user-uploaded images stored as local assets, mapped to their confirmed color names in the exact order specified by the user",
       "acceptanceCriteria": [
-        "ReviewsSection component exists in frontend/src/components/",
-        "Component is imported and rendered in App.tsx after AboutSection",
-        "Section has a distinct visual design consistent with existing sections"
+        "All 17 flake color cards in the FlakeColorsSection display the user-uploaded images instead of any Simiron CDN or Unsplash URLs",
+        "Each image is correctly matched to its confirmed color name in the specified order",
+        "Images load from frontend/public/assets/generated using local paths only",
+        "No external image dependencies (Simiron CDN or Unsplash) remain in FlakeColorsSection",
+        "The responsive grid layout and color name labels are preserved exactly as before"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/ReviewsSection.tsx",
-          "operation": "create",
-          "description": "Create ReviewsSection component with consistent section styling using existing color palette from tailwind.config.js. Include section header with title and description, container for review submission form, and display area for submitted reviews. Use concrete-inspired colors and match the styling patterns from AboutSection and ServicesSection."
-        },
-        {
-          "path": "frontend/src/App.tsx",
+          "path": "frontend/src/components/FlakeColorsSection.tsx",
           "operation": "modify",
-          "description": "Import ReviewsSection component and add it to the layout immediately after AboutSection and before ContactSection. Maintain existing component order: Navigation, HeroSection, ServicesSection, AboutSection, ReviewsSection (new), ContactSection, Footer."
-        }
-      ]
-    },
-    {
-      "id": "REQ-36",
-      "summary": "Build a review submission form in the ReviewsSection component with fields for star rating (1-5), customer name, service type dropdown, and written feedback textarea",
-      "acceptanceCriteria": [
-        "Form includes star rating selector with 1-5 star options",
-        "Form includes text input for customer name",
-        "Form includes dropdown for service type matching existing services (Patio Polyaspartic Coating, Driveway Polyaspartic Coating, Pool Deck Polyaspartic Coating, Garage Floor Polyaspartic Coating)",
-        "Form includes textarea for written feedback about customer experience",
-        "Form has validation requiring all fields before submission",
-        "Form displays success message after successful submission"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/ReviewsSection.tsx",
-          "operation": "modify",
-          "description": "Add review submission form with star rating selector (interactive 1-5 stars), customer name input field, service type dropdown with options matching ContactSection (Patio Polyaspartic Coating, Driveway Polyaspartic Coating, Pool Deck Polyaspartic Coating, Garage Floor Polyaspartic Coating), and feedback textarea. Implement form validation following the pattern from ContactSection.tsx requiring all fields before submission. Add success message display after successful submission using the useSubmitReview mutation hook. Include loading state during submission and error handling."
-        }
-      ]
-    },
-    {
-      "id": "REQ-38",
-      "summary": "Create React Query hooks in frontend/src/hooks/useQueries.ts for submitting reviews and fetching all reviews from the backend actor",
-      "acceptanceCriteria": [
-        "useSubmitReview mutation hook calls backend submitCustomerReview function",
-        "useGetAllReviews query hook calls backend getAllReviews function",
-        "Query automatically refetches after successful review submission",
-        "Hooks follow existing pattern from useQueries.ts"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/hooks/useQueries.ts",
-          "operation": "modify",
-          "description": "Add useSubmitReview mutation hook that calls backend submitCustomerReview function with parameters (id, rating, customerName, serviceType, feedback). Add useGetAllReviews query hook that calls backend getAllReviews function to fetch Array<CustomerReview>. Configure mutation to invalidate the getAllReviews query on success for automatic refetch. Follow existing pattern from submitQuoteRequest and getAllRequests hooks using useActor, useMutation, and useQuery."
-        }
-      ]
-    },
-    {
-      "id": "REQ-39",
-      "summary": "Display all submitted reviews in the ReviewsSection component showing star rating, customer name, service type, feedback text, and submission date for each review",
-      "acceptanceCriteria": [
-        "Reviews displayed in card layout with visual hierarchy",
-        "Star rating shown visually (filled/empty stars)",
-        "Customer name and service type clearly labeled",
-        "Feedback text displayed prominently",
-        "Reviews sorted by date with newest first",
-        "Empty state shown when no reviews exist yet",
-        "Loading state shown while fetching reviews"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/ReviewsSection.tsx",
-          "operation": "modify",
-          "description": "Add reviews display using useGetAllReviews hook. Render reviews in card layout with visual hierarchy showing filled/empty stars for rating, customer name with service type label, feedback text prominently displayed, and formatted submission date from timestamp. Sort reviews by timestamp with newest first. Include empty state message when no reviews exist and loading spinner while fetching. Use card styling consistent with ServicesSection cards and concrete-inspired color palette."
+          "description": "Replace the flakeColors array with 17 entries that reference the user-uploaded images stored in frontend/public/assets/ (IMG_2262.jpeg through IMG_2275.jpeg). Map each image to its confirmed color name in the exact order: 1. Tidal Wave (IMG_2262.jpeg), 2. Gravel Blend (IMG_2260.jpeg), 3. Coyote Blend (IMG_2261.jpeg), 4. Wombat Blend (IMG_2259.jpeg), 5. Stargazer Blend (IMG_2263.jpeg), 6. Outback Blend (IMG_2266.jpeg), 7. Orbit Blend (IMG_2267.jpeg), 8. Safari Blend (IMG_2265.jpeg), 9. Creekbed Blend (IMG_2270.jpeg), 10. Nightfall (IMG_2268.jpeg), 11. Glacier Blend (IMG_2272.jpeg), 12. Stonewash Blend (IMG_2273.jpeg), 13. Shoreline Blend (IMG_2264.jpeg), 14. Domino Blend (IMG_2269.jpeg), 15. Cabin Fever (IMG_2275.jpeg), 16. Feather Gray Blend (IMG_2274.jpeg), 17. Autumn Brown Blend (IMG_2271.jpeg). Remove all Simiron CDN URLs and Unsplash fallback URLs. Use local asset paths only (e.g., /assets/IMG_2262.jpeg). Preserve the existing component structure, responsive grid layout, color name labels, and CTA link to the contact section exactly as they are."
         }
       ]
     }
