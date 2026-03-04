@@ -5,6 +5,11 @@
 @layer base {
     :root {
         --radius: 0.625rem;
+        --copper: 0.65 0.18 42;
+        --copper-light: 0.75 0.18 42;
+        --copper-dark: 0.52 0.17 40;
+        --concrete-light: 0.95 0.005 240;
+        --concrete-dark: 0.25 0.008 240;
         --background: 1 0 0;
         --foreground: 0.145 0 0;
         --card: 1 0 0;
@@ -40,6 +45,11 @@
     }
 
     .dark {
+        --copper: 0.65 0.18 42;
+        --copper-light: 0.75 0.18 42;
+        --copper-dark: 0.52 0.17 40;
+        --concrete-light: 0.22 0.008 240;
+        --concrete-dark: 0.12 0.005 240;
         --background: 0.145 0 0;
         --foreground: 0.985 0 0;
         --card: 0.205 0 0;
