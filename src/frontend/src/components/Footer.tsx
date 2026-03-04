@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <footer
       className="text-white py-12"
-      style={{ backgroundColor: "oklch(0.3 0.01 240)" }}
+      style={{ backgroundColor: "oklch(0.25 0.015 240)" }}
     >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">

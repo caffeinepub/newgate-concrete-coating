@@ -86,7 +86,7 @@ function FlakeColorCard({ name, image }: FlakeColorCardProps) {
         />
       </div>
       <div className="p-3 text-center">
-        <p className="text-sm font-semibold text-concrete-800 leading-tight">
+        <p className="text-sm font-semibold text-concrete-900 leading-tight">
           {name}
         </p>
       </div>
@@ -96,18 +96,18 @@ function FlakeColorCard({ name, image }: FlakeColorCardProps) {
 
 export default function FlakeColorsSection() {
   return (
-    <section id="flake-colors" className="py-20 bg-concrete-50">
+    <section id="flake-colors" className="py-20 bg-concrete-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-14">
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-copper-600 mb-3">
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-copper mb-3">
             Customize Your Space
           </span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-concrete-900 mb-4">
             Flake Colors
           </h2>
-          <div className="w-16 h-1 bg-copper-500 mx-auto mb-6 rounded-full" />
-          <p className="text-lg text-concrete-600 max-w-2xl mx-auto">
+          <div className="w-16 h-1 bg-copper mx-auto mb-6 rounded-full" />
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Choose from our wide selection of decorative chip flake blends to
             create a unique, beautiful finish for your polyaspartic coating.
             Each blend is designed to complement any style — from modern to
@@ -128,11 +128,11 @@ export default function FlakeColorsSection() {
 
         {/* CTA Note */}
         <div className="mt-12 text-center">
-          <p className="text-concrete-500 text-sm">
+          <p className="text-muted-foreground text-sm">
             Not sure which blend is right for you?{" "}
             <a
               href="#contact"
-              className="text-copper-600 font-semibold hover:text-copper-700 underline underline-offset-2 transition-colors"
+              className="text-copper font-semibold hover:text-copper-dark underline underline-offset-2 transition-colors"
             >
               Request a free consultation
             </a>{" "}

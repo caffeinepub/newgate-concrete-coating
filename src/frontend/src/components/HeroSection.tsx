@@ -25,7 +25,7 @@ export default function HeroSection() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to bottom right, oklch(0.3 0.01 240 / 0.9), oklch(0.3 0.01 240 / 0.8), oklch(0.3 0.01 240 / 0.7))",
+              "linear-gradient(to bottom right, oklch(0.25 0.02 240 / 0.85), oklch(0.28 0.015 240 / 0.75), oklch(0.30 0.01 240 / 0.65))",
           }}
         />
       </div>

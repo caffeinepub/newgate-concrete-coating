@@ -90,7 +90,7 @@ export default function ReviewsSection() {
               className={
                 star <= rating
                   ? "fill-copper text-copper"
-                  : "text-concrete-medium"
+                  : "text-muted-foreground"
               }
             />
           </button>

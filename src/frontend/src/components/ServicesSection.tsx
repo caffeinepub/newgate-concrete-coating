@@ -75,7 +75,7 @@ export default function ServicesSection() {
                   className="absolute inset-0"
                   style={{
                     background:
-                      "linear-gradient(to top, oklch(0.3 0.01 240 / 0.8), transparent)",
+                      "linear-gradient(to top, oklch(0.25 0.015 240 / 0.8), transparent)",
                   }}
                 />
               </div>

@@ -97,7 +97,7 @@ export default function AboutSection() {
 
         <div
           className="rounded-2xl p-8 md:p-12 text-white"
-          style={{ backgroundColor: "oklch(0.3 0.01 240)" }}
+          style={{ backgroundColor: "oklch(0.25 0.015 240)" }}
         >
           <div className="max-w-3xl mx-auto text-center">
             <h3 className="text-3xl font-bold mb-4">The NewGate Difference</h3>
