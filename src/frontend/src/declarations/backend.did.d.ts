@@ -10,6 +10,13 @@ import type { ActorMethod } from '@icp-sdk/core/agent';
 import type { IDL } from '@icp-sdk/core/candid';
 import type { Principal } from '@icp-sdk/core/principal';
 
+export interface CustomerReview {
+  'customerName' : string,
+  'serviceType' : string,
+  'feedback' : string,
+  'timestamp' : bigint,
+  'rating' : number,
+}
 export interface QuoteRequest {
   'name' : string,
   'email' : string,
@@ -17,8 +24,15 @@ export interface QuoteRequest {
 }
 export interface _SERVICE {
   'getAllRequests' : ActorMethod<[], Array<QuoteRequest>>,
+  'getAllReviews' : ActorMethod<[], Array<CustomerReview>>,
+  'getCustomerReview' : ActorMethod<[string], CustomerReview>,
   'getQuoteRequest' : ActorMethod<[string], QuoteRequest>,
+  'getReviewsByService' : ActorMethod<[string], Array<CustomerReview>>,
   'searchQuoteRequestsByName' : ActorMethod<[string], Array<QuoteRequest>>,
+  'submitCustomerReview' : ActorMethod<
+    [string, number, string, string, string],
+    undefined
+  >,
   'submitQuoteRequest' : ActorMethod<
     [string, string, string, string],
     undefined

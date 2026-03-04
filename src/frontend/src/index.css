@@ -3,132 +3,139 @@
 @tailwind utilities;
 
 @layer base {
-    :root {
-        --radius: 0.5rem;
-        
-        /* Concrete-inspired neutrals */
-        --background: 0.98 0.005 240;
-        --foreground: 0.20 0.01 240;
-        --card: 1 0 0;
-        --card-foreground: 0.20 0.01 240;
-        --popover: 1 0 0;
-        --popover-foreground: 0.20 0.01 240;
-        
-        /* Copper accent */
-        --primary: 0.55 0.15 35;
-        --primary-foreground: 0.98 0.005 240;
-        
-        /* Warm grays */
-        --secondary: 0.92 0.01 240;
-        --secondary-foreground: 0.25 0.01 240;
-        --muted: 0.94 0.01 240;
-        --muted-foreground: 0.50 0.01 240;
-        --accent: 0.90 0.01 240;
-        --accent-foreground: 0.25 0.01 240;
-        
-        --destructive: 0.577 0.245 27.325;
-        --destructive-foreground: 0.985 0 0;
-        
-        --border: 0.88 0.01 240;
-        --input: 0.88 0.01 240;
-        --ring: 0.55 0.15 35;
-        
-        /* Concrete color palette */
-        --concrete-light: 0.96 0.005 240;
-        --concrete-dark: 0.30 0.01 240;
-        --copper: 0.55 0.15 35;
-        --copper-light: 0.65 0.15 35;
-        --copper-dark: 0.45 0.15 35;
-        
-        --chart-1: 0.646 0.222 41.116;
-        --chart-2: 0.6 0.118 184.704;
-        --chart-3: 0.398 0.07 227.392;
-        --chart-4: 0.828 0.189 84.429;
-        --chart-5: 0.769 0.188 70.08;
-    }
+  :root {
+    --radius: 0.5rem;
 
-    .dark {
-        --background: 0.18 0.01 240;
-        --foreground: 0.95 0.005 240;
-        --card: 0.22 0.01 240;
-        --card-foreground: 0.95 0.005 240;
-        --popover: 0.22 0.01 240;
-        --popover-foreground: 0.95 0.005 240;
-        
-        --primary: 0.60 0.15 35;
-        --primary-foreground: 0.18 0.01 240;
-        
-        --secondary: 0.28 0.01 240;
-        --secondary-foreground: 0.95 0.005 240;
-        --muted: 0.26 0.01 240;
-        --muted-foreground: 0.65 0.01 240;
-        --accent: 0.32 0.01 240;
-        --accent-foreground: 0.95 0.005 240;
-        
-        --destructive: 0.704 0.191 22.216;
-        --destructive-foreground: 0.95 0.005 240;
-        
-        --border: 0.30 0.01 240;
-        --input: 0.30 0.01 240;
-        --ring: 0.60 0.15 35;
-        
-        --concrete-light: 0.26 0.01 240;
-        --concrete-dark: 0.15 0.01 240;
-        --copper: 0.60 0.15 35;
-        --copper-light: 0.70 0.15 35;
-        --copper-dark: 0.50 0.15 35;
-    }
+    /* Concrete-inspired neutrals */
+    --background: 0.98 0.005 240;
+    --foreground: 0.2 0.01 240;
+    --card: 1 0 0;
+    --card-foreground: 0.2 0.01 240;
+    --popover: 1 0 0;
+    --popover-foreground: 0.2 0.01 240;
 
-    * {
-        @apply border-border;
-    }
-    
-    body {
-        @apply bg-background text-foreground;
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-        font-weight: 700;
-        letter-spacing: -0.02em;
-    }
+    /* Copper accent */
+    --primary: 0.55 0.15 35;
+    --primary-foreground: 0.98 0.005 240;
+
+    /* Warm grays */
+    --secondary: 0.92 0.01 240;
+    --secondary-foreground: 0.25 0.01 240;
+    --muted: 0.94 0.01 240;
+    --muted-foreground: 0.5 0.01 240;
+    --accent: 0.9 0.01 240;
+    --accent-foreground: 0.25 0.01 240;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    --border: 0.88 0.01 240;
+    --input: 0.88 0.01 240;
+    --ring: 0.55 0.15 35;
+
+    /* Concrete color palette */
+    --concrete-light: 0.96 0.005 240;
+    --concrete-dark: 0.3 0.01 240;
+    --copper: 0.55 0.15 35;
+    --copper-light: 0.65 0.15 35;
+    --copper-dark: 0.45 0.15 35;
+
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+  }
+
+  .dark {
+    --background: 0.18 0.01 240;
+    --foreground: 0.95 0.005 240;
+    --card: 0.22 0.01 240;
+    --card-foreground: 0.95 0.005 240;
+    --popover: 0.22 0.01 240;
+    --popover-foreground: 0.95 0.005 240;
+
+    --primary: 0.6 0.15 35;
+    --primary-foreground: 0.18 0.01 240;
+
+    --secondary: 0.28 0.01 240;
+    --secondary-foreground: 0.95 0.005 240;
+    --muted: 0.26 0.01 240;
+    --muted-foreground: 0.65 0.01 240;
+    --accent: 0.32 0.01 240;
+    --accent-foreground: 0.95 0.005 240;
+
+    --destructive: 0.704 0.191 22.216;
+    --destructive-foreground: 0.95 0.005 240;
+
+    --border: 0.3 0.01 240;
+    --input: 0.3 0.01 240;
+    --ring: 0.6 0.15 35;
+
+    --concrete-light: 0.26 0.01 240;
+    --concrete-dark: 0.15 0.01 240;
+    --copper: 0.6 0.15 35;
+    --copper-light: 0.7 0.15 35;
+    --copper-dark: 0.5 0.15 35;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      "Roboto", sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
 }
 
 @layer utilities {
-    .text-copper {
-        color: oklch(var(--copper));
-    }
-    
-    .text-copper-light {
-        color: oklch(var(--copper-light));
-    }
-    
-    .text-copper-dark {
-        color: oklch(var(--copper-dark));
-    }
-    
-    .bg-copper {
-        background-color: oklch(var(--copper));
-    }
-    
-    .bg-copper-light {
-        background-color: oklch(var(--copper-light));
-    }
-    
-    .bg-copper-dark {
-        background-color: oklch(var(--copper-dark));
-    }
-    
-    .bg-concrete-light {
-        background-color: oklch(var(--concrete-light));
-    }
-    
-    .bg-concrete-dark {
-        background-color: oklch(var(--concrete-dark));
-    }
-    
-    .border-copper {
-        border-color: oklch(var(--copper));
-    }
+  .text-copper {
+    color: oklch(var(--copper));
+  }
+
+  .text-copper-light {
+    color: oklch(var(--copper-light));
+  }
+
+  .text-copper-dark {
+    color: oklch(var(--copper-dark));
+  }
+
+  .bg-copper {
+    background-color: oklch(var(--copper));
+  }
+
+  .bg-copper-light {
+    background-color: oklch(var(--copper-light));
+  }
+
+  .bg-copper-dark {
+    background-color: oklch(var(--copper-dark));
+  }
+
+  .bg-concrete-light {
+    background-color: oklch(var(--concrete-light));
+  }
+
+  .bg-concrete-dark {
+    background-color: oklch(var(--concrete-dark));
+  }
+
+  .border-copper {
+    border-color: oklch(var(--copper));
+  }
 }

@@ -1,109 +1,140 @@
-import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
+
+const navLinks = [
+  { label: "Services", href: "#services" },
+  { label: "Flake Colors", href: "#flake-colors" },
+  { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
+  { label: "Reviews", href: "#reviews" },
+];
 
 export default function Navigation() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setIsMobileMenuOpen(false);
+  const handleNavClick = (href: string) => {
+    setIsMenuOpen(false);
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-  const navLinks = [
-    { label: 'Home', id: 'hero' },
-    { label: 'Services', id: 'services' },
-    { label: 'About', id: 'about' },
-    { label: 'Contact', id: 'contact' },
-  ];
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/95 backdrop-blur-md shadow-lg border-b border-border' : 'bg-transparent'
+        isScrolled
+          ? "bg-white/95 backdrop-blur-sm shadow-md border-b border-border"
+          : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo and Title */}
+          {/* Logo */}
           <button
-            onClick={() => scrollToSection('hero')}
-            className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            type="button"
+            className="flex items-center gap-3 cursor-pointer bg-transparent border-0 p-0"
+            onClick={() => handleNavClick("#home")}
           >
             <img
-              src="/assets/IMG_2255.jpeg"
-              alt="NewGate Concrete Coating Logo"
+              src="/assets/uploads/IMG_2290-1-1.jpeg"
+              alt="Newgate Coatings Logo"
               className="h-[4.375rem] w-auto object-contain"
             />
-            <span className="text-lg font-bold text-foreground hidden sm:block">
-              NewGate Concrete Coating
-            </span>
+            <div className="flex flex-col">
+              <span
+                className={`font-extrabold text-base leading-tight tracking-tight transition-colors duration-300 ${
+                  isScrolled ? "text-foreground" : "text-white"
+                }`}
+              >
+                Newgate Coatings
+              </span>
+              <span
+                className={`text-xs font-medium tracking-wide transition-colors duration-300 ${
+                  isScrolled ? "text-copper" : "text-white/70"
+                }`}
+              >
+                Polyaspartic Specialists
+              </span>
+            </div>
           </button>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
-                className="text-foreground/80 hover:text-copper font-medium transition-colors"
+                key={link.href}
+                type="button"
+                onClick={() => handleNavClick(link.href)}
+                className={`px-4 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:text-copper ${
+                  isScrolled
+                    ? "text-foreground"
+                    : "text-white/90 hover:text-white"
+                }`}
               >
                 {link.label}
               </button>
             ))}
-            <Button
-              onClick={() => scrollToSection('contact')}
-              className="bg-copper hover:bg-copper-dark text-white"
+            <button
+              type="button"
+              onClick={() => handleNavClick("#contact")}
+              className="ml-3 px-5 py-2 bg-copper hover:bg-copper-dark text-white text-sm font-bold rounded-md transition-colors duration-200 shadow-sm"
             >
-              Get a Quote
-            </Button>
+              Get a Free Quote
+            </button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Toggle */}
           <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-foreground"
+            type="button"
+            className={`md:hidden p-2 rounded-md transition-colors ${
+              isScrolled
+                ? "text-foreground hover:bg-muted"
+                : "text-white hover:bg-white/10"
+            }`}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
+      </div>
 
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
-            <div className="flex flex-col space-y-4">
-              {navLinks.map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => scrollToSection(link.id)}
-                  className="text-foreground/80 hover:text-copper font-medium transition-colors text-left"
-                >
-                  {link.label}
-                </button>
-              ))}
-              <Button
-                onClick={() => scrollToSection('contact')}
-                className="bg-copper hover:bg-copper-dark text-white w-full"
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-white border-t border-border shadow-lg">
+          <div className="px-4 py-3 space-y-1">
+            {navLinks.map((link) => (
+              <button
+                key={link.href}
+                type="button"
+                onClick={() => handleNavClick(link.href)}
+                className="block w-full text-left px-4 py-3 text-sm font-semibold text-foreground hover:bg-muted hover:text-copper rounded-md transition-colors"
               >
-                Get a Quote
-              </Button>
+                {link.label}
+              </button>
+            ))}
+            <div className="pt-2 pb-1">
+              <button
+                type="button"
+                onClick={() => handleNavClick("#contact")}
+                className="w-full px-4 py-3 bg-copper hover:bg-copper-dark text-white text-sm font-bold rounded-md transition-colors"
+              >
+                Get a Free Quote
+              </button>
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </nav>
   );
 }

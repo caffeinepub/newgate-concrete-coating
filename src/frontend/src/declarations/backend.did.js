@@ -13,14 +13,33 @@ export const QuoteRequest = IDL.Record({
   'email' : IDL.Text,
   'message' : IDL.Text,
 });
+export const CustomerReview = IDL.Record({
+  'customerName' : IDL.Text,
+  'serviceType' : IDL.Text,
+  'feedback' : IDL.Text,
+  'timestamp' : IDL.Int,
+  'rating' : IDL.Nat8,
+});
 
 export const idlService = IDL.Service({
   'getAllRequests' : IDL.Func([], [IDL.Vec(QuoteRequest)], ['query']),
+  'getAllReviews' : IDL.Func([], [IDL.Vec(CustomerReview)], ['query']),
+  'getCustomerReview' : IDL.Func([IDL.Text], [CustomerReview], ['query']),
   'getQuoteRequest' : IDL.Func([IDL.Text], [QuoteRequest], ['query']),
+  'getReviewsByService' : IDL.Func(
+      [IDL.Text],
+      [IDL.Vec(CustomerReview)],
+      ['query'],
+    ),
   'searchQuoteRequestsByName' : IDL.Func(
       [IDL.Text],
       [IDL.Vec(QuoteRequest)],
       ['query'],
+    ),
+  'submitCustomerReview' : IDL.Func(
+      [IDL.Text, IDL.Nat8, IDL.Text, IDL.Text, IDL.Text],
+      [],
+      [],
     ),
   'submitQuoteRequest' : IDL.Func(
       [IDL.Text, IDL.Text, IDL.Text, IDL.Text],
@@ -37,14 +56,33 @@ export const idlFactory = ({ IDL }) => {
     'email' : IDL.Text,
     'message' : IDL.Text,
   });
+  const CustomerReview = IDL.Record({
+    'customerName' : IDL.Text,
+    'serviceType' : IDL.Text,
+    'feedback' : IDL.Text,
+    'timestamp' : IDL.Int,
+    'rating' : IDL.Nat8,
+  });
   
   return IDL.Service({
     'getAllRequests' : IDL.Func([], [IDL.Vec(QuoteRequest)], ['query']),
+    'getAllReviews' : IDL.Func([], [IDL.Vec(CustomerReview)], ['query']),
+    'getCustomerReview' : IDL.Func([IDL.Text], [CustomerReview], ['query']),
     'getQuoteRequest' : IDL.Func([IDL.Text], [QuoteRequest], ['query']),
+    'getReviewsByService' : IDL.Func(
+        [IDL.Text],
+        [IDL.Vec(CustomerReview)],
+        ['query'],
+      ),
     'searchQuoteRequestsByName' : IDL.Func(
         [IDL.Text],
         [IDL.Vec(QuoteRequest)],
         ['query'],
+      ),
+    'submitCustomerReview' : IDL.Func(
+        [IDL.Text, IDL.Nat8, IDL.Text, IDL.Text, IDL.Text],
+        [],
+        [],
       ),
     'submitQuoteRequest' : IDL.Func(
         [IDL.Text, IDL.Text, IDL.Text, IDL.Text],

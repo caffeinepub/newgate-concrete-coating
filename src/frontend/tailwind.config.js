@@ -67,13 +67,21 @@ export default {
                     ring: 'oklch(var(--sidebar-ring))'
                 },
                 copper: {
-                    DEFAULT: 'oklch(var(--copper))',
-                    light: 'oklch(var(--copper-light))',
-                    dark: 'oklch(var(--copper-dark))'
+                    DEFAULT: 'oklch(var(--copper) / <alpha-value>)',
+                    light: 'oklch(var(--copper-light) / <alpha-value>)',
+                    dark: 'oklch(var(--copper-dark) / <alpha-value>)',
+                    300: 'oklch(0.75 0.12 35 / <alpha-value>)',
+                    500: 'oklch(var(--copper) / <alpha-value>)',
+                    600: 'oklch(var(--copper-dark) / <alpha-value>)',
                 },
                 concrete: {
-                    light: 'oklch(var(--concrete-light))',
-                    dark: 'oklch(var(--concrete-dark))'
+                    light: 'oklch(var(--concrete-light) / <alpha-value>)',
+                    dark: 'oklch(var(--concrete-dark) / <alpha-value>)',
+                    100: 'oklch(0.95 0.005 240 / <alpha-value>)',
+                    200: 'oklch(0.90 0.007 240 / <alpha-value>)',
+                    700: 'oklch(0.40 0.01 240 / <alpha-value>)',
+                    900: 'oklch(0.20 0.01 240 / <alpha-value>)',
+                    medium: 'oklch(0.70 0.01 240 / <alpha-value>)',
                 }
             },
             borderRadius: {

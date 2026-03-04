@@ -89,6 +89,13 @@ export class ExternalBlob {
         return this;
     }
 }
+export interface CustomerReview {
+    customerName: string;
+    serviceType: string;
+    feedback: string;
+    timestamp: bigint;
+    rating: number;
+}
 export interface QuoteRequest {
     name: string;
     email: string;
@@ -96,8 +103,12 @@ export interface QuoteRequest {
 }
 export interface backendInterface {
     getAllRequests(): Promise<Array<QuoteRequest>>;
+    getAllReviews(): Promise<Array<CustomerReview>>;
+    getCustomerReview(id: string): Promise<CustomerReview>;
     getQuoteRequest(id: string): Promise<QuoteRequest>;
+    getReviewsByService(serviceType: string): Promise<Array<CustomerReview>>;
     searchQuoteRequestsByName(name: string): Promise<Array<QuoteRequest>>;
+    submitCustomerReview(id: string, rating: number, customerName: string, serviceType: string, feedback: string): Promise<void>;
     submitQuoteRequest(id: string, name: string, email: string, message: string): Promise<void>;
 }
 export class Backend implements backendInterface {
@@ -116,6 +127,34 @@ export class Backend implements backendInterface {
             return result;
         }
     }
+    async getAllReviews(): Promise<Array<CustomerReview>> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.getAllReviews();
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.getAllReviews();
+            return result;
+        }
+    }
+    async getCustomerReview(arg0: string): Promise<CustomerReview> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.getCustomerReview(arg0);
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.getCustomerReview(arg0);
+            return result;
+        }
+    }
     async getQuoteRequest(arg0: string): Promise<QuoteRequest> {
         if (this.processError) {
             try {
@@ -130,6 +169,20 @@ export class Backend implements backendInterface {
             return result;
         }
     }
+    async getReviewsByService(arg0: string): Promise<Array<CustomerReview>> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.getReviewsByService(arg0);
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.getReviewsByService(arg0);
+            return result;
+        }
+    }
     async searchQuoteRequestsByName(arg0: string): Promise<Array<QuoteRequest>> {
         if (this.processError) {
             try {
@@ -141,6 +194,20 @@ export class Backend implements backendInterface {
             }
         } else {
             const result = await this.actor.searchQuoteRequestsByName(arg0);
+            return result;
+        }
+    }
+    async submitCustomerReview(arg0: string, arg1: number, arg2: string, arg3: string, arg4: string): Promise<void> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.submitCustomerReview(arg0, arg1, arg2, arg3, arg4);
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.submitCustomerReview(arg0, arg1, arg2, arg3, arg4);
             return result;
         }
     }

@@ -1,16 +1,19 @@
-import { Button } from '@/components/ui/button';
-import { ArrowRight, Phone } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Phone } from "lucide-react";
 
 export default function HeroSection() {
   const scrollToContact = () => {
-    const element = document.getElementById('contact');
+    const element = document.getElementById("contact");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -18,25 +21,34 @@ export default function HeroSection() {
           alt="Premium polyaspartic coating"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-concrete-dark/90 via-concrete-dark/80 to-concrete-dark/70" />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to bottom right, oklch(0.3 0.01 240 / 0.9), oklch(0.3 0.01 240 / 0.8), oklch(0.3 0.01 240 / 0.7))",
+          }}
+        />
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 z-10 text-center">
+      <div className="container mx-auto px-4 z-10 text-center pt-24">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             NewGate Concrete Coating
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-4 leading-relaxed">
-            Premium Polyaspartic Coating Solutions for Patios, Driveways, Pool Decks & Garages
+            Premium Polyaspartic Coating Solutions for Patios, Driveways, Pool
+            Decks & Garages
           </p>
           <p className="text-lg md:text-xl text-copper font-semibold mb-6">
-            Affordable, Reasonable prices, great quality from start to finish
+            Affordable, Reasonable Prices, Great Quality From Start to Finish
           </p>
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Transform your concrete surfaces with durable, beautiful polyaspartic coatings that protect and enhance your property for years to come.
+            Transform your concrete surfaces with durable, beautiful
+            polyaspartic coatings that protect and enhance your property for
+            years to come.
           </p>
-          
+
           {/* Phone Number CTA */}
           <a
             href="tel:+18136082563"
@@ -57,14 +69,17 @@ export default function HeroSection() {
             </Button>
             <Button
               onClick={() => {
-                const element = document.getElementById('services');
+                const element = document.getElementById("services");
                 if (element) {
-                  element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  element.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
                 }
               }}
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-concrete-dark text-lg px-8 py-6 h-auto"
+              className="border-2 border-white text-white hover:bg-white hover:text-gray-800 text-lg px-8 py-6 h-auto"
             >
               View Services
             </Button>

@@ -1,39 +1,54 @@
-import { SiFacebook, SiInstagram, SiLinkedin } from 'react-icons/si';
-import { Heart, Mail, Phone, MapPin } from 'lucide-react';
+import { Heart, Mail, MapPin, Phone } from "lucide-react";
+import { SiFacebook, SiInstagram, SiLinkedin } from "react-icons/si";
 
-const serviceAreas = ['Orlando, FL', 'Tampa, FL', 'Plant City, FL'];
+const serviceAreas = ["Orlando, FL", "Tampa, FL", "Plant City, FL"];
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const appIdentifier = typeof window !== 'undefined' ? window.location.hostname : 'newgate-concrete-coating';
+  const appIdentifier =
+    typeof window !== "undefined"
+      ? window.location.hostname
+      : "newgate-concrete-coating";
 
   return (
-    <footer className="bg-concrete-dark text-white py-12">
+    <footer
+      className="text-white py-12"
+      style={{ backgroundColor: "oklch(0.3 0.01 240)" }}
+    >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold text-copper mb-4">NewGate Concrete Coating</h3>
+            <h3 className="text-2xl font-bold text-copper mb-4">
+              NewGate Concrete Coating
+            </h3>
             <p className="text-white/80 mb-4">
-              Premium polyaspartic coating solutions for residential and commercial properties.
+              Premium polyaspartic coating solutions for residential and
+              commercial properties.
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-copper transition-colors flex items-center justify-center"
                 aria-label="Facebook"
               >
                 <SiFacebook size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-copper transition-colors flex items-center justify-center"
                 aria-label="Instagram"
               >
                 <SiInstagram size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-copper transition-colors flex items-center justify-center"
                 aria-label="LinkedIn"
               >
@@ -48,9 +63,10 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <button
+                  type="button"
                   onClick={() => {
-                    const element = document.getElementById('services');
-                    if (element) element.scrollIntoView({ behavior: 'smooth' });
+                    const element = document.getElementById("services");
+                    if (element) element.scrollIntoView({ behavior: "smooth" });
                   }}
                   className="text-white/80 hover:text-copper transition-colors"
                 >
@@ -59,9 +75,10 @@ export default function Footer() {
               </li>
               <li>
                 <button
+                  type="button"
                   onClick={() => {
-                    const element = document.getElementById('about');
-                    if (element) element.scrollIntoView({ behavior: 'smooth' });
+                    const element = document.getElementById("about");
+                    if (element) element.scrollIntoView({ behavior: "smooth" });
                   }}
                   className="text-white/80 hover:text-copper transition-colors"
                 >
@@ -70,9 +87,10 @@ export default function Footer() {
               </li>
               <li>
                 <button
+                  type="button"
                   onClick={() => {
-                    const element = document.getElementById('contact');
-                    if (element) element.scrollIntoView({ behavior: 'smooth' });
+                    const element = document.getElementById("contact");
+                    if (element) element.scrollIntoView({ behavior: "smooth" });
                   }}
                   className="text-white/80 hover:text-copper transition-colors"
                 >
@@ -94,20 +112,23 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2 text-white/80 hover:text-copper transition-colors">
                 <Mail size={18} className="flex-shrink-0" />
-                <a href="mailto:Newgatecoatings@icloud.com" className="hover:underline break-all">
+                <a
+                  href="mailto:Newgatecoatings@icloud.com"
+                  className="hover:underline break-all"
+                >
                   Newgatecoatings@icloud.com
                 </a>
               </li>
             </ul>
-            
+
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <MapPin size={18} className="text-copper flex-shrink-0" />
                 <h5 className="font-semibold text-white">Service Areas</h5>
               </div>
               <ul className="space-y-1 text-white/80">
-                {serviceAreas.map((area, index) => (
-                  <li key={index} className="text-sm">
+                {serviceAreas.map((area) => (
+                  <li key={area} className="text-sm">
                     {area}
                   </li>
                 ))}
@@ -121,7 +142,9 @@ export default function Footer() {
             © {currentYear} NewGate Concrete Coating. All rights reserved.
           </p>
           <p className="flex items-center justify-center gap-1 text-sm">
-            Built with <Heart className="text-copper" size={16} fill="currentColor" /> using{' '}
+            Built with{" "}
+            <Heart className="text-copper" size={16} fill="currentColor" />{" "}
+            using{" "}
             <a
               href={`https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(appIdentifier)}`}
               target="_blank"

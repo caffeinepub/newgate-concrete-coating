@@ -1,20 +1,23 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import HeroSection from './components/HeroSection';
-import ServicesSection from './components/ServicesSection';
-import AboutSection from './components/AboutSection';
-import ContactSection from './components/ContactSection';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
+import AboutSection from "./components/AboutSection";
+import ContactSection from "./components/ContactSection";
+import FlakeColorsSection from "./components/FlakeColorsSection";
+import Footer from "./components/Footer";
+import HeroSection from "./components/HeroSection";
+import Navigation from "./components/Navigation";
+import ReviewsSection from "./components/ReviewsSection";
+import ServicesSection from "./components/ServicesSection";
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Navigation />
-      <main>
+      <main className="flex-1">
         <HeroSection />
-        <ServicesSection />
         <AboutSection />
+        <ServicesSection />
+        <FlakeColorsSection />
         <ContactSection />
+        <ReviewsSection />
       </main>
       <Footer />
     </div>
